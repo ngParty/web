@@ -18,6 +18,11 @@ export const Nav = () => (
           <a>Home</a>
         </Link>
       </li>
+      <li>
+        <Link href="/big-party-VI">
+          <a>ngBigParty IV</a>
+        </Link>
+      </li>
       {links.map(({ key, href, label }) => (
         <li key={key}>
           <a href={href}>{label}</a>
