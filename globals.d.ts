@@ -7,9 +7,20 @@ declare namespace JSX {
     layout?: string
   }
 
+  interface AmpIframe {
+    width?: string
+    height?: string
+    sandbox?: string
+    layout?: string
+    frameborder?: string
+    src?: string
+    children?: React.ReactNode
+  }
+  interface AmpAnalytics {}
+
   interface IntrinsicElements {
     'amp-img': AmpImg
-    'amp-iframe': any
-    'amp-analytics': any
+    'amp-iframe': AmpIframe
+    'amp-analytics': AmpAnalytics
   }
 }
