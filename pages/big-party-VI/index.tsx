@@ -5,9 +5,9 @@ import {
   AmpStyleKeyframes,
   AmpStyleCustom,
 } from '../../components'
-import { data as DATA, Styles, Layout } from '../../conferences/big-party-iv'
+import { data as DATA, Layout } from '../../conferences/big-party-iv'
 
-export const config = { amp: true }
+export const config: import('next').PageConfig = { amp: true }
 
 const BigPartyIV = () => {
   return (
@@ -48,7 +48,6 @@ const BigPartyIV = () => {
             />
           </>
         }
-        ampStyles={<Styles />}
       >
         {/* <amp-analytics type="googleanalytics" id="analytics-ga">
     <script type="application/json">
@@ -71,7 +70,7 @@ const BigPartyIV = () => {
           <div className="content">
             <About />
 
-            <DescriptionAndNav />
+            <DescriptionAndNav data={DATA.links} />
 
             <Schedule data={DATA.speakers} />
 
@@ -137,7 +136,8 @@ const About = () => {
   )
 }
 
-const DescriptionAndNav = () => {
+const DescriptionAndNav = (props: { data: typeof DATA['links'] }) => {
+  const { data } = props
   return (
     <section className="description ngparty-conf-section">
       <p>
@@ -151,10 +151,7 @@ const DescriptionAndNav = () => {
           and make peace once and for all by talking about various popular JS
           frameworks by awesome international speakers and far far beyond.
         </span>
-        <a
-          href="https://www.meetup.com/ngParty/events/235878773/"
-          className="reserve-button"
-        >
+        <a href={data.signUp} className="btn__sign-up">
           Sign Up
         </a>
       </p>
@@ -235,15 +232,9 @@ const ScheduleTalk = (props: {
       <time>{time}</time>
 
       <div>
-        <h5 className="session">{data.talk.title}</h5>
-        <small>
-          <a href={`#${data.id}`}>
-            {data.name}, {data.company} / {data.country}
-          </a>
-        </small>
-        <p>{data.talk.abstract}</p>
+        <ScheduleTalkSpeaker data={data} />
         {data.talk.assets ? (
-          <small>
+          <small className="speaker-assets">
             {data.talk.assets.slides ? (
               <a href={data.talk.assets.slides}>slides</a>
             ) : null}
@@ -260,9 +251,38 @@ const ScheduleTalk = (props: {
   )
 }
 
+const ScheduleTalkSpeaker = (props: { data: typeof DATA['speakers'][0] }) => {
+  const { data } = props
+
+  return (
+    <>
+      <h5 className="session">{data.talk.title}</h5>
+      <ScheduleTalkSpeakerTitle data={data} />
+      <p>{data.talk.abstract}</p>
+    </>
+  )
+}
+const ScheduleTalkSpeakerTitle = (props: {
+  data: typeof DATA['speakers'][0]
+}) => {
+  const { data } = props
+  return (
+    <small className="speaker-link">
+      <a href={`#${data.id}`}>
+        {data.name}, {data.company} / {data.country}
+      </a>
+    </small>
+  )
+}
+
 const Schedule = (props: { data: typeof DATA['speakers'] }) => {
   const { data } = props
   const [andrei, jaroslav, james, tereza, sebastian, david] = data
+  const ampImgProps = {
+    width: '100',
+    height: '100',
+    layout: 'responsive',
+  }
 
   return (
     <section className="schedule ngparty-conf-section">
@@ -304,7 +324,7 @@ const Schedule = (props: { data: typeof DATA['speakers'] }) => {
                 <div>
                   <h5>Dinner break</h5>
                   <p>
-                    <br />
+                    Take a break! Enjoy complimentary dinner from our partners!
                   </p>
                 </div>
               </li>
@@ -312,84 +332,42 @@ const Schedule = (props: { data: typeof DATA['speakers'] }) => {
               <li className="session">
                 <ScheduleTalk data={tereza} time="1930" />
               </li>
-
               <li className="session">
                 <ScheduleTalk data={andrei} time="2000" />
               </li>
-
               <li className="session">
                 <ScheduleTalk data={jaroslav} time="2030" />
               </li>
-
               <li className="session">
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/tereza.jpg"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={tereza.img} {...ampImgProps}></amp-img>
                 </span>
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/james.jpg"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={james.img} {...ampImgProps}></amp-img>
                 </span>
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/jaroslav.png"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={jaroslav.img} {...ampImgProps}></amp-img>
                 </span>
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/andrei.png"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={andrei.img} {...ampImgProps}></amp-img>
                 </span>
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/david.jpg"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={david.img} {...ampImgProps}></amp-img>
                 </span>
                 <span className="image multiple">
-                  <amp-img
-                    src="/img/speakers/sebastian.jpg"
-                    width="100"
-                    height="100"
-                  ></amp-img>
+                  <amp-img src={sebastian.img} {...ampImgProps}></amp-img>
                 </span>
                 <time>2100</time>
                 <div>
                   <h5 className="session">Q&amp;A with speakers</h5>
-                  <small>
-                    <a href="#tereza">Tereza Sokol, @noredink / DK</a>
-                  </small>
-                  <small>
-                    <a href="#jaroslav">Jaroslav Minařík, MSD / CZ</a>
-                  </small>
-                  <small>
-                    <a href="#andrei">Andrei Pfeiffer, @e_spres_oh / RO</a>
-                  </small>
-                  <small>
-                    <a href="#sebastian">
-                      Sebastian Fröstl, @smallimprove / DE
-                    </a>
-                  </small>
-                  <small>
-                    <a href="#david">David Durman, @clientIO / CZ</a>
-                  </small>
-                  <small>
-                    <a href="#james">James Henry, @ultimateangular / UK</a>
-                  </small>
+                  <ScheduleTalkSpeakerTitle data={tereza} />
+                  <ScheduleTalkSpeakerTitle data={jaroslav} />
+                  <ScheduleTalkSpeakerTitle data={andrei} />
+                  <ScheduleTalkSpeakerTitle data={sebastian} />
+                  <ScheduleTalkSpeakerTitle data={david} />
+                  <ScheduleTalkSpeakerTitle data={james} />
                   <p>
-                    Ask our speakers any question.
-                    <br />
+                    Ask our speakers any question during our panel discussion
                   </p>
                 </div>
               </li>
@@ -403,6 +381,30 @@ const Schedule = (props: { data: typeof DATA['speakers'] }) => {
           </div>
         </div>
       </div>
+      <style jsx global>{`
+        .speaker-assets {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+        }
+        .speaker-assets > a {
+          transition: box-shadow ease-out 250ms;
+          padding: 0.5em;
+        }
+        .speaker-assets > a:hover,
+        .speaker-assets > a:focus {
+          color: #0d47a1;
+          box-shadow: 0 0 2px #607d8b87;
+        }
+        .speaker-assets > :first-child {
+          margin-left: -0.5em;
+        }
+        .speaker-link {
+          display: block;
+          line-height: 1.6em;
+        }
+      `}</style>
     </section>
   )
 }

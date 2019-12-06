@@ -1,4 +1,7 @@
 export const data = {
+  links: {
+    signUp: 'https://www.meetup.com/ngParty/events/235878773',
+  },
   partners: [
     {
       name: 'EmbedIT',
