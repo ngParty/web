@@ -1,6 +1,16 @@
 export const data = {
+  ga: {
+    account: 'UA-74292133-4',
+  },
   links: {
     signUp: 'https://www.meetup.com/ngParty/events/235878773',
+    codeOfConduct: 'https://github.com/ngParty/core/blob/master/COC.md',
+    email: 'mailto:info@ngparty.cz',
+    social: {
+      twitter: '//twitter.com/ngPartyCz',
+      github: '//github.com/ngParty',
+      linkedin: '//linkedin.com/company/ngparty',
+    },
   },
   partners: [
     {
