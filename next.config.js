@@ -7,10 +7,10 @@ const cfg = {
    * @type {import('./next-config').WebpackConfig}
    */
   webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.raw.css$/,
-      use: 'raw-loader',
-    })
+    // config.module.rules.push({
+    //   test: /\.raw.css$/,
+    //   use: 'raw-loader',
+    // })
     return config
   },
 }
