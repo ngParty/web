@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import globalStyles from './global.styles'
+import { globalStyles } from './global.styles'
 
 const rootSelector = '.ngparty-conf'
 const sectionSelector = `${rootSelector}-section`
@@ -17,7 +17,7 @@ export const Layout = (props: Props) => {
   return (
     <>
       <Head>
-        <title>{title}ngBigParty IV JavaScript REunited</title>
+        <title>{title}</title>
         <link rel="icon" href="/img/icons/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
