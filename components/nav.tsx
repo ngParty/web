@@ -19,8 +19,13 @@ export const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href="/big-party-VI">
+        <Link href="/big-party-iv">
           <a>ngBigParty IV</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/big-party-v">
+          <a>ngBigParty V</a>
         </Link>
       </li>
       {links.map(({ key, href, label }) => (
