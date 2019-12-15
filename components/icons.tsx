@@ -1,3 +1,4 @@
+// sources -> @see https://github.com/simple-icons/simple-icons
 type Props = JSX.IntrinsicElements['svg']
 
 export const LinkedInIcon = (props: Props) => {
@@ -42,24 +43,55 @@ export const TwitterIcon = (props: Props) => {
   )
 }
 
-export const NgPartyIcon = (props: Props) => {
+export const FacebookIcon = (props: Props) => {
+  return (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>Facebook icon</title>
+      <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z" />
+    </svg>
+  )
+}
+
+type LogoProps = Props & Partial<typeof defaultProps>
+const themeColors = {
+  light: {
+    colorFill: '#000',
+    bgFill: '#fff',
+  },
+  dark: {
+    colorFill: '#fff',
+    bgFill: '#000',
+  },
+}
+const defaultProps = {
+  theme: 'dark' as 'light' | 'dark',
+}
+export const NgPartyIcon = (props: LogoProps) => {
+  const { theme, ...rest } = { ...defaultProps, ...props }
+
+  const colors = themeColors[theme]
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      stroke-linejoin="round"
-      stroke-miterlimit="2"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
+      clipRule="evenodd"
       viewBox="0 0 1195 1191"
-      {...props}
+      {...rest}
     >
       <title>ngParty logo</title>
       <defs />
       <path fill="none" d="M-236-238h1666.67v1666.67H-236z" />
-      <path fill="#212158" d="M-1.646-3.648h1197.96v1197.96H-1.646z" />
+      <path fill={colors.bgFill} d="M-1.646-3.648h1197.96v1197.96H-1.646z" />
       <path
-        fill="#fff"
-        fill-rule="nonzero"
+        fill={colors.colorFill}
+        fillRule="nonzero"
         d="M431.86 513.144V689h50.673V567.878c11.653-8.298 24.895-12.889 35.136-12.889 14.301 0 20.481 7.592 20.481 21.364V689h50.673V560.639c0-33.194-18.362-51.026-50.32-51.026-22.247 0-43.611 10.24-60.561 22.247l-2.648-18.716H431.86zM737.489 470.769c-2.649 12.889-8.299 31.958-13.772 42.728-8.298-2.472-17.656-3.884-27.367-3.884-45.2 0-74.509 23.482-74.509 57.559v14.125c0 20.834 10.946 37.608 29.662 47.495-11.3 7.769-21.541 19.599-21.541 33.9 0 11.477 7.24 20.835 16.95 26.308-13.771 7.416-28.073 20.481-28.073 39.02 0 28.78 24.366 45.024 65.858 45.024h30.015c41.316 0 74.863-17.657 74.863-55.088 0-38.49-28.603-58.089-64.622-58.089h-43.434c-7.239 0-12.007-3.178-12.007-9.004 0-4.591 3.885-9.711 8.652-13.772 5.65 1.059 11.83 1.589 18.186 1.589 48.378 0 76.628-25.602 76.628-61.091v-6.886c0-18.715-6.18-33.193-20.481-44.493 10.77-10.241 22.776-26.838 29.662-42.905l-44.67-12.536zm-66.564 95.873c0-12.889 8.651-24.718 26.484-24.718 19.246 0 26.485 14.478 26.485 28.779v6.71c0 14.301-7.239 28.25-26.485 28.25-19.245 0-26.484-13.772-26.484-28.25v-10.771zm49.261 130.303c13.772 0 24.895 5.121 24.895 20.482 0 17.832-17.126 19.245-34.783 19.245h-18.892c-17.48 0-30.192-4.061-30.192-18.539 0-10.064 7.769-17.48 14.831-21.364 3.178.176 6.356.176 9.711.176h34.43z"
       />
     </svg>

@@ -8,7 +8,7 @@ const sectionSelector = `${rootSelector}-section`
 type Props = {
   title: string
   ampStyles?: React.ReactElement
-  ampDependencies: React.ReactElement | React.ReactElement[]
+  ampDependencies?: React.ReactElement | React.ReactElement[]
   children: React.ReactElement | React.ReactElement[]
 }
 export const Layout = (props: Props) => {
