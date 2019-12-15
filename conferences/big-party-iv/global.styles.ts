@@ -1518,14 +1518,10 @@ export const globalStyles = css.global`
     margin: 10px 5px;
     padding: 10px;
     position: relative;
-    -webkit-transition: box-shadow 0.3s, -webkit-transform 0.3s;
-    transition: box-shadow 0.3s, -webkit-transform 0.3s;
     transition: transform 0.3s, box-shadow 0.3s;
-    transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s;
   }
 
   .card::before {
-    background: -webkit-linear-gradient(left, #1c79c0, #0389ff, #0dd3ff);
     background: linear-gradient(to right, #1c79c0, #0389ff, #0dd3ff);
     content: '';
     left: 0;
