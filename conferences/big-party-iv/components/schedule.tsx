@@ -9,7 +9,7 @@ export const Schedule = (props: { data: SpeakerModel[] }) => {
     width: '100',
     height: '100',
     layout: 'responsive',
-  }
+  } as const
 
   return (
     <section className="schedule ngparty-conf-section">
