@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import { normalizeStyles } from '../../components'
+// import { normalizeStyles } from '../../components'
+import normalizeCss from '../../components/normalize.css'
 
 import { stylesUtils } from './utils.styles'
 import { styles } from './layout.styles'
@@ -31,7 +32,7 @@ export const Layout = (props: Props) => {
         {ampStyles}
       </Head>
       <style jsx global>
-        {normalizeStyles}
+        {normalizeCss}
       </style>
       <style jsx global>
         {stylesUtils}
