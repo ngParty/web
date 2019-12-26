@@ -44,7 +44,7 @@ export const Faq = () => {
       <ul className="faq-content">
         {DATA.map((item) => {
           return (
-            <li className="faq-content-item">
+            <li className="faq-content-item" key={item.question}>
               <FaqItem {...item} />
             </li>
           )
