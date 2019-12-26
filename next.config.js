@@ -7,10 +7,29 @@ const cfg = {
    * @type {import('./next-config').WebpackConfig}
    */
   webpack: (config, options) => {
-    // config.module.rules.push({
-    //   test: /\.raw.css$/,
-    //   use: 'raw-loader',
-    // })
+    /**
+     * @type {import('webpack').Rule}
+     * @see https://github.com/zeit/styled-jsx#styles-in-regular-css-files
+     */
+    const styledJsxRule = {
+      test: /\.css$/,
+      use: [
+        options.defaultLoaders.babel,
+        {
+          loader: require('styled-jsx/webpack').loader,
+
+          options: /** @type {import('styled-jsx/webpack-config').Options} */ ({
+            type: (fileName, options) =>
+              fileName.endsWith('.module.css')
+                ? 'scoped'
+                : options.query.type || 'global',
+          }),
+        },
+      ],
+    }
+
+    config.module.rules.push(styledJsxRule)
+
     return config
   },
 }
@@ -20,4 +39,4 @@ const config = withCSS({
   ...cfg,
 })
 
-module.exports = config
+module.exports = cfg

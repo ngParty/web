@@ -25,6 +25,7 @@
     "next-env.d.ts",
     "typings",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "next.config.js"
   ]
 }
