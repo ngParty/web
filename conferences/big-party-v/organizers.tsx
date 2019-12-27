@@ -36,8 +36,8 @@ export const Organizers = () => {
             independent Next Generation development Community group in Prague,
             committed to encourage, inspire and share JavaScript knowledge among
             its members. <br />
-            <code className="organizer-tags">
-              #JavaScript, #byCommunityForCommunity, #devsUnited!
+            <code className="organizer-tags" aria-label="ngParty tags">
+              #JavaScript, #ForCommunityByCommunity, #devsUnited
             </code>
           </p>
           <p className="organizer-bio">
