@@ -1,3 +1,5 @@
+import { data } from '../../shared'
+
 export interface LinkModel {
   label: string
   link: string
@@ -34,3 +36,5 @@ export const navigation: NavItemModel[] = [
     link: '#organizers',
   },
 ]
+
+export { data }

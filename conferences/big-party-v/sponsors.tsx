@@ -1,3 +1,4 @@
+import { data as moduleData } from './data'
 import { styles } from './sponsors.styles'
 
 interface SponsorModel {
@@ -80,6 +81,7 @@ const sponsorByType = {
 }
 
 export const Sponsors = () => {
+  const becomeSponsorLink = `${moduleData.links.contact.email.link}?subject=ngBigParty V - Partnership request&body=Hey ngParty Team! We'd like to become a partner of your community conference. Can you provide more more info for us? Cheers, <Company Name>`
   return (
     <>
       <style jsx global>
@@ -106,7 +108,7 @@ export const Sponsors = () => {
             className="btn btn--secondary"
             rel="noopener"
             target="_blank"
-            href="http://bit.ly/ngBigPartyV-partnership-proposal"
+            href={becomeSponsorLink}
           >
             Become a sponsor
           </a>

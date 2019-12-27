@@ -5,7 +5,7 @@ import {
   LinkedInIcon,
   FacebookIcon,
 } from '../../components'
-import { navigation, LinkModel } from './data'
+import { navigation, LinkModel, data } from './data'
 
 const dataConferences: LinkModel[] = [
   {
@@ -44,21 +44,8 @@ const dataSocial: LinkModel[] = [
     link: 'https://www.linkedin.com/company/ngparty',
   },
 ]
-const dataMore: LinkModel[] = [
-  {
-    label: 'Code of Conduct',
-    link: 'https://confcodeofconduct.com/',
-  },
-  {
-    label: 'Brand Materials',
-    link: 'http://bit.ly/ngParty-brand-materials',
-  },
-]
-
-const dataEmail = {
-  link: 'mailto:ng@ngparty.cz',
-  label: 'ng@ngparty.cz',
-}
+const dataMore: LinkModel[] = data.links.more
+const dataEmail = data.links.contact.email
 
 export const Footer = () => {
   return (
