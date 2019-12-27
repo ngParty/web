@@ -153,6 +153,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
         {speakerBios.map((item) => {
           return (
             <amp-img
+              key={item.fullName}
               className={`ap-m-agenda-item-image ${cx.multiple}`}
               alt={`Profile picture for ${item.fullName}`}
               src={item.img}
