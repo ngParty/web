@@ -8,10 +8,10 @@ interface FaqModel {
 const DATA: FaqModel[] = [
   {
     question: 'Who is the event for?',
-    answer: `Web developers and designers who have used AMP and want to create
-    even better AMP experiences, who haven't used AMP and are curious or
-    want to contribute to AMP to make it better for everyone, and the
-    web at large.`,
+    answer: `Web developers of all skill levels, mainly focused on JavaScript. Main purpose of this event is to get our community together and have a chance to interact with international web technology experts on the stage.
+    This edition topic is "Javascript, the Age of compilers and A.I.".
+    You as a JavaScript developer will have an unique opportunity to extended your skill set by learning other multi platform languages that gives you another set of superpowers and that compile to JavaScript, thus can be used on the Web.
+    Beside that our talks will include A.I. related content with JavaScript and other valuable information that you can leverage on daily basis at work.`,
   },
   {
     question: 'What language will the talks be in?',
@@ -27,7 +27,7 @@ const DATA: FaqModel[] = [
   },
   {
     question: 'Does it cost anything?',
-    answer: `Yes. Although this is a community event so ticket prices will be very affordable.`,
+    answer: `Yes. Although this is a non profit community event, we need some money to make it happen.`,
   },
   {
     question: 'Will it possible to buy batch tickets?',
