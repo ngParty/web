@@ -1,17 +1,19 @@
 declare namespace AMP {
-  interface AmpLightBox {
+  interface AmpBaseElement extends JSX.IntrinsicAttributes {}
+
+  interface AmpLightBox extends AmpBaseElement {
     id: string
     layout: 'nodisplay'
     children?: React.ReactNode
   }
-  interface AmpSidebar {
+  interface AmpSidebar extends AmpBaseElement {
     id: string
     className?: string
     layout: 'nodisplay'
     side: 'left' | 'right'
     children?: React.ReactNode
   }
-  interface AmpImg {
+  interface AmpImg extends AmpBaseElement {
     alt?: string
     src?: string
     width?: string
@@ -29,7 +31,7 @@ declare namespace AMP {
     children?: React.ReactNode
   }
 
-  interface AmpIframe {
+  interface AmpIframe extends AmpBaseElement {
     width?: string
     height?: string
     sandbox?: string
@@ -39,5 +41,5 @@ declare namespace AMP {
     className?: string
     children?: React.ReactNode
   }
-  interface AmpAnalytics {}
+  interface AmpAnalytics extends AmpBaseElement {}
 }

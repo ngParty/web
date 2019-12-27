@@ -49,7 +49,10 @@ const dataMore: LinkModel[] = [
     label: 'Code of Conduct',
     link: 'https://confcodeofconduct.com/',
   },
-  { label: 'Brand Materials', link: 'http://bit.ly/ngParty-brand-materials' },
+  {
+    label: 'Brand Materials',
+    link: 'http://bit.ly/ngParty-brand-materials',
+  },
 ]
 
 const dataEmail = {
