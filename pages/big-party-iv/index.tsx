@@ -8,8 +8,8 @@ import {
   FAQ,
   Schedule,
   Partners,
+  Footer,
 } from '../../conferences/big-party-iv'
-import { Footer } from '../../conferences/big-party-iv/components/footer'
 
 export const config: import('next').PageConfig = { amp: true }
 
