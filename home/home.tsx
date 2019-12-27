@@ -59,7 +59,7 @@ const Logo = () => {
   return (
     <section className="logo-container">
       <h1 className="logo">
-        <NgPartyIcon width="100%" />
+        <NgPartyIcon />
       </h1>
       <h2 className="brand-title">
         ngParty <small>Next Generation Development</small>

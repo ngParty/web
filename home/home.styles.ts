@@ -65,10 +65,17 @@ export const styles = css.global`
   }
   .logo {
     display: flex;
+    width: 100%;
+    height: 100%;
     max-width: 7ch;
     max-height: 7ch;
     margin: 0;
     box-shadow: var(--shadow-logo);
+  }
+  .logo > svg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
   .brand-title {
     margin: 0.25em 0 0;
