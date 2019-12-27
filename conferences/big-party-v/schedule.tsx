@@ -68,7 +68,7 @@ const DATA: ScheduleItemModel[] = [
     time: '1230',
   },
   {
-    title: 'Next generation UX of EC-Cube, powered by AMP',
+    title: 'Next generation Dev',
     time: '1315',
     speaker: {
       bio: [
@@ -83,7 +83,7 @@ const DATA: ScheduleItemModel[] = [
     },
   },
   {
-    title: 'Next generation UX of EC-Cube, powered by AMP',
+    title: 'Next generation UX',
     time: '1415',
     speaker: {
       bio: [
