@@ -1,3 +1,4 @@
+import { data } from '../shared'
 export const DATA = {
   navigation: [
     {
@@ -17,16 +18,7 @@ export const DATA = {
       link: '//github.com/ngparty',
     },
   ],
-  more: [
-    {
-      label: 'Code of Conduct',
-      link: 'https://confcodeofconduct.com/',
-    },
-    {
-      label: 'Brand Materials',
-      link: 'http://bit.ly/ngParty-brand-materials',
-    },
-  ],
+  more: data.links.more,
   social: [
     {
       id: 'twitter',
@@ -39,10 +31,5 @@ export const DATA = {
       link: '//github.com/ngparty',
     },
   ] as const,
-  contact: {
-    email: {
-      link: 'mailto:ng@ngparty.cz',
-      label: 'ng@ngparty.cz',
-    },
-  },
+  contact: data.links.contact,
 }
