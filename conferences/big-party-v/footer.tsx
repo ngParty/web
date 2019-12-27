@@ -5,9 +5,9 @@ import {
   LinkedInIcon,
   FacebookIcon,
 } from '../../components'
-import { navigation, NavItemModel } from './data'
+import { navigation, LinkModel } from './data'
 
-const DATA: NavItemModel[] = [
+const dataConferences: LinkModel[] = [
   {
     label: 'ngBigParty IV',
     link: '/big-party-iv',
@@ -25,11 +25,8 @@ const DATA: NavItemModel[] = [
     link: 'https://www.eventbrite.com/e/ngbigparty-tickets-18241722483#',
   },
 ]
-interface SocialLinkModel<T extends string = string> {
-  label: T
-  link: string
-}
-const dataSocial: SocialLinkModel[] = [
+
+const dataSocial: LinkModel[] = [
   {
     label: 'twitter',
     link: 'https://twitter.com/ngPartyCz',
@@ -47,6 +44,14 @@ const dataSocial: SocialLinkModel[] = [
     link: 'https://www.linkedin.com/company/ngparty',
   },
 ]
+const dataMore: LinkModel[] = [
+  {
+    label: 'Code of Conduct',
+    link: 'https://confcodeofconduct.com/',
+  },
+  { label: 'Brand Materials', link: 'http://bit.ly/ngParty-brand-materials' },
+]
+
 const dataEmail = {
   link: 'mailto:ng@ngparty.cz',
   label: 'ng@ngparty.cz',
@@ -60,32 +65,9 @@ export const Footer = () => {
       </style>
       <nav>
         <div className="internal-links">
-          <ul className="footer-menu list-reset">
-            {navigation.map((item) => {
-              return (
-                <li key={item.label}>
-                  <a href={item.link}>{item.label}</a>
-                </li>
-              )
-            })}
-          </ul>
-          <ul className="footer-menu list-reset">
-            <li>
-              <a href="https://confcodeofconduct.com/">Code of Conduct</a>
-            </li>
-            <li>
-              <a href="/blog/">Blog</a>
-            </li>
-          </ul>
-          <ul className="footer-menu list-reset">
-            {DATA.map((item) => {
-              return (
-                <li key={item.label}>
-                  <a href={item.link}>{item.label}</a>
-                </li>
-              )
-            })}
-          </ul>
+          <FooterNavigationItem data={navigation} />
+          <FooterNavigationItem data={dataMore} />
+          <FooterNavigationItem data={dataConferences} />
         </div>
         <div className="external-links">
           <div className="social-media">
@@ -98,8 +80,23 @@ export const Footer = () => {
           </a>
         </div>
       </nav>
-      <CopyRight year="2019" />
+      <Copyright year="2019" />
     </footer>
+  )
+}
+
+const FooterNavigationItem = (props: { data: LinkModel[] }) => {
+  const { data } = props
+  return (
+    <ul className="footer-menu list-reset">
+      {data.map((item) => {
+        return (
+          <li key={item.label}>
+            <a href={item.link}>{item.label}</a>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
@@ -110,8 +107,7 @@ const socialIconsMap = {
   linkedin: LinkedInIcon,
 }
 type SocialIconTypes = keyof typeof socialIconsMap
-
-const SocialLink = (props: SocialLinkModel) => {
+const SocialLink = (props: LinkModel) => {
   const { label, link } = props
   const Icon = socialIconsMap[label as SocialIconTypes]
 
@@ -122,7 +118,7 @@ const SocialLink = (props: SocialLinkModel) => {
   )
 }
 
-const CopyRight = (props: { year: string }) => {
+const Copyright = (props: { year: string }) => {
   const { year } = props
   return (
     <p className="copyright">
