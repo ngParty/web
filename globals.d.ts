@@ -5,6 +5,7 @@ declare namespace JSX {
     'amp-analytics': AMP.AmpAnalytics
     'amp-sidebar': AMP.AmpSidebar
     'amp-lightbox': AMP.AmpLightBox
+    'amp-script': AMP.AmpScript
   }
 }
 

@@ -1,4 +1,13 @@
 declare namespace AMP {
+  type Layouts =
+    | 'responsive'
+    | 'fixed'
+    | 'fill'
+    | 'fixed-height'
+    | 'flex-item'
+    | 'container'
+    | 'nodisplay'
+    | 'intrinsic'
   interface AmpBaseElement extends JSX.IntrinsicAttributes {}
 
   interface AmpLightBox extends AmpBaseElement {
@@ -18,15 +27,7 @@ declare namespace AMP {
     src?: string
     width?: string
     height?: string
-    layout?:
-      | 'responsive'
-      | 'fixed'
-      | 'fill'
-      | 'fixed-height'
-      | 'flex-item'
-      | 'container'
-      | 'nodisplay'
-      | 'intrinsic'
+    layout?: Layouts
     className?: string
     children?: React.ReactNode
   }
@@ -42,4 +43,13 @@ declare namespace AMP {
     children?: React.ReactNode
   }
   interface AmpAnalytics extends AmpBaseElement {}
+
+  interface AmpScript {
+    width?: string
+    height?: string
+    script?: string
+    src?: string
+    layout?: Layouts
+    children?: React.ReactNode
+  }
 }
