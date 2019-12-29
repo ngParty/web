@@ -38,4 +38,10 @@ export const styles = css.global`
     color: ${theme.colors.white};
     background: ${theme.colors.accent};
   }
+
+  .btn[disabled] {
+    cursor: not-allowed;
+    background: #b0bec5;
+    color: #263238;
+  }
 `

@@ -1,5 +1,7 @@
 import { styles } from './schedule.styles'
 
+import * as data from './data'
+
 const DATA: ScheduleItemModel[] = [
   {
     title: 'Registration',
@@ -120,17 +122,27 @@ interface ScheduleSpeakerBio {
 }
 
 export const Schedule = () => {
+  const { config } = data
+
   return (
-    <div className="ap-o-agenda">
+    <>
       <style jsx global>
         {styles}
       </style>
-      <ul className="ap-o-agenda-content-list conf">
-        {DATA.map((item) => {
-          return <ScheduleItem key={item.title} {...item} />
-        })}
-      </ul>
-    </div>
+      {config.enableSchedule ? (
+        <div className="ap-o-agenda">
+          <ul className="ap-o-agenda-content-list conf">
+            {DATA.map((item) => {
+              return <ScheduleItem key={item.title} {...item} />
+            })}
+          </ul>
+        </div>
+      ) : (
+        <p className="center">
+          Schedule is not ready yet. We're actively working on it! Stay tunned
+        </p>
+      )}
+    </>
   )
 }
 

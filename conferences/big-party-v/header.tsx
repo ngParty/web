@@ -30,7 +30,7 @@ export const Header = () => {
         <MainNav data={DATA} />
 
         <div className="headerbar-action center m0 p0 flex justify-center nowrap">
-          <BuyTicketsAction link="#about" />
+          <BuyTicketsAction link="#tickets" />
         </div>
       </header>
 

@@ -1,4 +1,6 @@
-import { styles, aboutNumbersStyles } from './intro.styles'
+import * as data from './data'
+
+import { styles, aboutNumbersStyles, ticketsStyles } from './intro.styles'
 
 const DATA = {
   title: 'ngBigParty V',
@@ -42,11 +44,7 @@ export const Intro = () => {
         <section className="about">
           <p className="about-content">{DATA.about}</p>
           <AboutInNumbers data={DATA.aboutInNumbers} />
-          <div className="about-action">
-            <a className="btn btn--accent" href="" target="_blank">
-              Get Tickets
-            </a>
-          </div>
+          <Tickets id="tickets" enable={data.config.enableTickets} />
         </section>
       </div>
     </>
@@ -80,4 +78,23 @@ const normalizeAboutNumbersData = (value: Record<string, number>) => {
 }
 const pluralize = (word: string, count: number) => {
   return count > 1 ? `${word}s` : word
+}
+
+const Tickets = (props: { id: string; enable: boolean }) => {
+  const { enable, id } = props
+
+  return (
+    <div id={id} className="about-action">
+      <style jsx>{ticketsStyles}</style>
+      {enable ? (
+        <a className="btn btn--accent" href="" target="_blank">
+          Get Tickets
+        </a>
+      ) : (
+        <button className="btn btn--accent" disabled>
+          Available soon...
+        </button>
+      )}
+    </div>
+  )
 }

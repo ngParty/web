@@ -142,14 +142,6 @@ export const styles = css`
     font-size: 1.1rem;
     line-height: 1.4;
   }
-
-  .about-action {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-  }
 `
 
 export const aboutNumbersStyles = css`
@@ -174,5 +166,15 @@ export const aboutNumbersStyles = css`
   }
   .about-numbers > li > span {
     color: ${theme.colors.lightGrey};
+  }
+`
+
+export const ticketsStyles = css`
+  .about-action {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
   }
 `
