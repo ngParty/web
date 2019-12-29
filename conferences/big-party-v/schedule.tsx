@@ -1,4 +1,5 @@
 import { styles } from './schedule.styles'
+import { Fragment } from 'react'
 
 const DATA: ScheduleItemModel[] = [
   {
@@ -176,7 +177,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
 
         {speakerBios.map((item, idx) => {
           return (
-            <>
+            <Fragment key={item.fullName}>
               <SpeakerLink
                 key={item.fullName}
                 link={item.link}
@@ -184,7 +185,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
                 company={item.company}
               />
               {isMultiple ? <br /> : null}
-            </>
+            </Fragment>
           )
         })}
         <div className="ap-m-agenda-item-description-text">{speakerTalk}</div>
