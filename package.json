@@ -7,6 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
+    "deploy":"yarn build && yarn export && touch out/.nojekyll",
     "format:base": "prettier --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,css,md,html}\"",
     "format": "yarn format:base --write",
     "format:check": "yarn format:base --check",
