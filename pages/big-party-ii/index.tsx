@@ -1,5 +1,3 @@
 import { redirectTo } from '../../shared'
 
-export default redirectTo('https://www.ngparty.cz/ngBigParty-II', {
-  external: true,
-})
+export default redirectTo('https://www.ngparty.cz/ngBigParty-II')

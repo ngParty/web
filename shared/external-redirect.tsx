@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NextPageContext } from 'next'
 import Head from 'next/head'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 
 /**
  * @experimental
@@ -23,30 +23,27 @@ export const ampRedirectTo = (redirectUrl: string) => {
   return Redirect
 }
 
-/**
- * NOTE:
- * 1. This doesn't work with `next export` as getInitialProps work only with node served app
- * 2. `Router.push` is unable to push external urls
- */
-export const redirectTo = (redirectUrl: string, { external = false } = {}) => {
+export const redirectTo = (redirectUrl: string, { external = true } = {}) => {
   const Redirect = () => {
-    return React.createElement('div', null, 'redirecting...')
-  }
-  Redirect.getInitialProps = async ({ res }: NextPageContext) => {
-    if (res) {
-      res.writeHead(302, { Location: redirectUrl })
-      res.end()
-      return {}
-    }
+    const router = useRouter()
 
-    if (external) {
-      window.location.href = redirectUrl
-    } else {
-      Router.push(redirectUrl)
-    }
+    useEffect(() => {
+      if (external) {
+        window.location.href = redirectUrl
+        return
+      }
+      router.push(redirectUrl)
+    }, [])
 
-    return {}
+    return React.createElement('div', null, 'Redirecting...')
   }
 
   return Redirect
+}
+
+function serverRedirect(res: NextPageContext['res'], redirectUrl: string) {
+  if (res) {
+    res.writeHead(302, { Location: redirectUrl })
+    res.end()
+  }
 }
