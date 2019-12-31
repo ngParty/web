@@ -1,5 +1,4 @@
 import { styles, lightboxStyles } from './speakers.styles'
-import { theme } from './theme'
 import { TwitterIcon } from '../../components'
 
 interface SpeakerModel {
@@ -131,7 +130,7 @@ const DATA: SpeakerModel[] = [
     name: 'Patrick Stapfer',
     img: '/img/big-party-v/speakers/patrick.jpg',
     company: 'Reason Association',
-    jobTitle: 'CTO',
+    jobTitle: 'System Engineer',
     country: 'AT, Vienna',
     about: `Patrick is board member of the Reason Association, a non-profit organization to develop and support the Reason and OCaml platform. He is currently working on the new documentation website (reasonml.org) and on an improved Reason online playground to greatly improve the developer experience. He is also taking part in coordinating relevant community efforts to make sure to reach and document important milestones.`,
     social: {
