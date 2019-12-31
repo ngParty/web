@@ -38,7 +38,7 @@ export const navigation: NavItemModel[] = [
 ]
 
 const config = {
-  enableSchedule: false,
+  enableSchedule: true,
   enableTickets: false,
 }
 

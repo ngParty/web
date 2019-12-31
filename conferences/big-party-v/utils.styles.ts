@@ -1,5 +1,7 @@
 import css from 'styled-jsx/css'
 
+import { theme } from './theme'
+
 export const stylesUtils = css.global`
   .fixed {
     position: fixed;
@@ -39,5 +41,11 @@ export const stylesUtils = css.global`
   }
   .center {
     text-align: center;
+  }
+  .text-light {
+    color: ${theme.colors.textLight};
+  }
+  .text-dark {
+    color: ${theme.colors.textDark};
   }
 `

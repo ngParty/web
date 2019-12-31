@@ -2,106 +2,227 @@ import { styles } from './schedule.styles'
 
 import * as data from './data'
 
+const imgPlaceholder = '/img/big-party-v/meta/apple-touch-icon.png'
 const DATA: ScheduleItemModel[] = [
   {
     title: 'Registration',
     time: '0800',
   },
   {
-    title: 'Opening Notes',
+    title: 'Welcome keynote',
     time: '0900',
     speaker: {
       bio: [
         {
           fullName: 'Martin Hochel',
           company: 'ngParty',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
+          img: '',
           link: '#martinhochel',
         },
         {
           fullName: 'Viliam Elischer',
           company: 'ngParty',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
+          img: '',
           link: '#viliamelischer',
+        },
+        {
+          fullName: 'Mario Vejlupek',
+          company: 'ngParty',
+          img: '',
+          link: '#mariovejlupek',
         },
       ],
       talk: 'Welcome to ngBigParty V!',
     },
   },
   {
-    title: 'Keynote',
+    title: 'Talk 1',
     time: '0915',
     speaker: {
       bio: [
         {
-          fullName: 'Malte Ubl',
-          company: 'Google',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
-          link: '#malteubl',
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
         },
       ],
-      talk: 'OMG',
+      talk: '',
     },
   },
   {
-    title: 'Next generation UX of EC-Cube, powered by AMP',
-    time: '1115',
+    title: 'Talk 2',
+    time: '0940',
     speaker: {
       bio: [
         {
-          fullName: 'Balla Khadang',
-          company: 'YouGov',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
-          link: '#ballakhadang',
-        },
-        {
-          fullName: 'Levi Clancy',
-          company: 'Re:Coded',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
-          link: '#leviclancy',
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
         },
       ],
-      talk:
-        'A PHP based CMS with more than 1.8M downloads and 30K+ live merchants, EC-CUBE now uses AMP to satisfy the UX of their end users. This session covers the journey of EC-CUBE AMPing their platform starting from converting existing Twig template to eventually making the site PWA using AMP. The general essence of how EC-CUBE adapted AMP into existing platform should be useful for not only CMSers but broader Web developers.',
+      talk: '',
+    },
+  },
+  {
+    title: 'Coffee Break',
+    time: '1000',
+  },
+  {
+    title: 'Talk 3',
+    time: '1030',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'Talk 4',
+    time: '1055',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
     },
   },
   {
     title: 'Lunch',
-    time: '1230',
+    time: '1130',
   },
   {
-    title: 'Next generation Dev',
-    time: '1315',
+    title: 'Lightning/Ingnite Talks',
+    time: '1300',
+  },
+  {
+    title: 'Talk 5',
+    time: '1330',
     speaker: {
       bio: [
         {
-          fullName: 'Balla Khadang',
-          company: 'YouGov',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
-          link: '#ballakhadang',
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
         },
       ],
-      talk: `Too often, engineers view AMP as "just one more thing to implement." In reality, AMP provides engineers with a series of guiding principles that can help them deliver more performant websites—even when it comes to non-AMP pages. So, what would happen if teams began to think with an AMP Core Mindset? In this talk, we will explore AMP's core design principles and unpack how businesses can (and should!) incorporate these principles into all aspects of their decision making, in order to help teams align on goals and make better decisions at every level.`,
+      talk: '',
     },
   },
   {
-    title: 'Next generation UX',
-    time: '1415',
+    title: 'Talk 6',
+    time: '1355',
     speaker: {
       bio: [
         {
-          fullName: 'Levi Clancy',
-          company: 'Re:Coded',
-          img: 'https://amp.dev/static/img/amp-conf/speakers/amp.png',
-          link: '#leviclancy',
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
         },
       ],
-      talk: `Introduce a journey of ‘cafe24’ from the early stage of its business to growing as a successful leading ecommerce platform. Describe a true meaning of AMP adaptation to ecommerce platform and how it could bring useful insights for the purpose of driving positive business change for both market and user from a platform provider point of view. Explain our e-commerce platform structure including the main CMS and the details of our AMP plugin along with the overall project in the presentation. Shows a demo to visualize a smooth AMP to AMP navigation and a visual comparison between non-AMP page and a pre rendered paired AMP page in WebPageTest. Lastly add comments on our next plan about leveraging AMP and key PWA technologies (which had been already launched and used by many of our merchants) in our business strategy as well as our upcoming plan in big picture.`,
+      talk: '',
     },
   },
   {
-    title: 'Party!',
-    time: '1900',
+    title: 'Coffee Break',
+    time: '1420',
+  },
+  {
+    title: 'Talk 7',
+    time: '1450',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'Talk 8',
+    time: '1515',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'Coffee Break',
+    time: '1540',
+  },
+  {
+    title: 'Talk 9',
+    time: '1610',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'Talk 10',
+    time: '1635',
+    speaker: {
+      bio: [
+        {
+          fullName: '',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'Closing Words',
+    time: '17:00',
+    speaker: {
+      bio: [
+        {
+          fullName: 'ngParty',
+          company: '',
+          img: '',
+          link: '#',
+        },
+      ],
+      talk: '',
+    },
+  },
+  {
+    title: 'After (ng)Party!',
+    time: '1730',
   },
 ]
 
@@ -130,13 +251,20 @@ export const Schedule = () => {
         {styles}
       </style>
       {config.enableSchedule ? (
-        <div className="ap-o-agenda">
-          <ul className="ap-o-agenda-content-list conf">
-            {DATA.map((item) => {
-              return <ScheduleItem key={item.title} {...item} />
-            })}
-          </ul>
-        </div>
+        <>
+          <p className="center text-light">
+            Schedule is not final yet. We'll let you know when it's final. Stay
+            tunned!
+          </p>
+
+          <div className="agenda">
+            <ul className="agenda-content-list conf">
+              {DATA.map((item) => {
+                return <ScheduleItem key={item.title} {...item} />
+              })}
+            </ul>
+          </div>
+        </>
       ) : (
         <p className="center">
           Schedule is not ready yet. We're actively working on it! Stay tunned
@@ -160,15 +288,15 @@ const ScheduleItem = (props: ScheduleItemModel) => {
   }
 
   return (
-    <li className="ap-m-agenda-item">
-      <div className="ap-m-agenda-item-speakers">
+    <li className="agenda-item">
+      <div className="agenda-item-speakers">
         {speakerBios.map((item) => {
           return (
             <amp-img
               key={item.fullName}
-              className={`ap-m-agenda-item-image ${cx.multiple}`}
+              className={`agenda-item-image ${cx.multiple}`}
               alt={`Profile picture for ${item.fullName}`}
-              src={item.img}
+              src={item.img || imgPlaceholder}
               layout="fixed"
               height="50px"
               width="50px"
@@ -176,12 +304,12 @@ const ScheduleItem = (props: ScheduleItemModel) => {
           )
         })}
       </div>
-      <div className="ap-m-agenda-item-time">{time}</div>
-      <div
-        className={`ap-m-agenda-item-description ${cx.session} ${cx.keynote}`}
-      >
+      <div className="agenda-item-time">
+        <Time time={time} />
+      </div>
+      <div className={`agenda-item-description ${cx.session} ${cx.keynote}`}>
         <div
-          className={`ap-m-agenda-item-description-title ${cx.session} ${cx.keynote}`}
+          className={`agenda-item-description-title ${cx.session} ${cx.keynote}`}
         >
           {title}
         </div>
@@ -199,7 +327,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
             </>
           )
         })}
-        <div className="ap-m-agenda-item-description-text">{speakerTalk}</div>
+        <div className="agenda-item-description-text">{speakerTalk}</div>
       </div>
     </li>
   )
@@ -212,11 +340,22 @@ type SpeakerLinkProps = Omit<
 
 const SpeakerLink = (props: SpeakerLinkProps) => {
   const { link, company, fullName } = props
-  const formatedName = `${fullName}, ${company}`
+  const formatedName = fullName ? `${fullName}, ${company}` : ''
 
   return (
-    <a href={link} className="ap-m-agenda-item-description-speaker">
+    <a href={link} className="agenda-item-description-speaker">
       {formatedName}
     </a>
   )
+}
+
+const Time = (props: { time: string }) => {
+  const { time } = props
+  return <>{formatTime(time)}</>
+
+  function formatTime(value: string) {
+    return value.replace(/(\d{2})(\d{2})/, (match, p1, p2) => {
+      return `${p1}:${p2}`
+    })
+  }
 }
