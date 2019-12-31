@@ -6,6 +6,8 @@ import normalizeCss from '../../components/normalize.css'
 import { stylesUtils } from './utils.styles'
 import { styles } from './layout.styles'
 import { styles as buttonStyles } from './button.styles'
+import { Meta } from './meta'
+import { theme } from './theme'
 
 type Props = {
   title: string
@@ -20,7 +22,7 @@ export const Layout = (props: Props) => {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/img/icons/favicon.ico" />
+        <Meta theme={theme} />
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
           rel="stylesheet"
