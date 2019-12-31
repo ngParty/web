@@ -1,8 +1,14 @@
 const DATA = {
   description: `April 7 2020 / Prague, Czechia. 5th edition of unique JavaScript community conference in Czechia. Community, international experts, networking, tons of knowledge. Join us!`,
   title: `ngBigParty V - JavaScript, Age of compilers and A.I.`,
-  imgTwitter: '/img/big-party-v/social/big-party-v-card.jpeg',
-  imgFacebook: '/img/big-party-v/social/big-party-v-card.jpeg',
+  facebook: {
+    id: 'ngPartyCz',
+    img: '/img/big-party-v/social/big-party-v-card.jpeg',
+  },
+  twitter: {
+    id: '@ngPartyCz',
+    img: '/img/big-party-v/social/big-party-v-card.jpeg',
+  },
   ico: '/img/icons/favicon.ico?v=1',
   appleIco: {
     maskIco: '/img/big-party-v/meta/safari-pinned-tab.svg?v=1',
@@ -15,7 +21,7 @@ const DATA = {
   microsoft: {
     config: '/img/big-party-v/meta/browserconfig.xml?v=1',
   },
-  manifest: '/img/big-party-v/meta/site.webmanifest',
+  manifest: '/img/big-party-v/meta/manifest.json',
 }
 
 export const Meta = (props: { theme: typeof import('./theme').theme }) => {
@@ -45,23 +51,29 @@ export const Meta = (props: { theme: typeof import('./theme').theme }) => {
         href={DATA.appleIco.favicon[16]}
       />
       <link rel="mask-icon" href={DATA.appleIco.maskIco} color="#f74c4f" />
-      {/*
-      // TODO
       <link rel="manifest" href={DATA.manifest} />
-       */}
       <link rel="shortcut icon" href={DATA.ico} />
       <meta name="msapplication-config" content={DATA.microsoft.config} />
       <meta name="theme-color" content={theme.colors.primary} />
+
+      {/*
+        use link[href] to define image url for microdata
+       */}
+      <link itemProp="image" href={DATA.twitter.img} />
+
+      {/* OGP meta */}
       <meta property="og:title" content={DATA.title} />
-      <meta property="og:image" content={DATA.imgFacebook} />
+      <meta property="og:image" content={DATA.facebook.id} />
       <meta property="og:description" content={DATA.description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="" />
+      {/* <meta property="og:url" content="" /> */}
 
-      <meta name="twitter:card" content="summary" />
+      {/* Twitter meta */}
       <meta name="twitter:title" content={DATA.title} />
       <meta name="twitter:description" content={DATA.description} />
-      <meta name="twitter:image" content={DATA.imgTwitter} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content={DATA.twitter.id} />
+      <meta name="twitter:image" content={DATA.twitter.img} />
     </>
   )
 }

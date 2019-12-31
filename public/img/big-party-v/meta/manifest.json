@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "ngBigParty V",
+    "short_name": "ngBigParty V",
     "icons": [
         {
             "src": "/img/big-party-v/meta/android-chrome-192x192.png",
@@ -13,7 +13,10 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#212158",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/big-party-v",
+    "start_url": "/big-party-v?utm_source=a2hs"
+
 }
