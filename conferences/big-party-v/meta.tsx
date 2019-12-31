@@ -9,7 +9,7 @@ const DATA = {
     id: '@ngPartyCz',
     img: '/img/big-party-v/social/big-party-v-card.jpeg',
   },
-  ico: '/img/icons/favicon.ico?v=1',
+  ico: '/favicon.ico?v=1',
   appleIco: {
     maskIco: '/img/big-party-v/meta/safari-pinned-tab.svg?v=1',
     touchIco: '/img/big-party-v/meta/apple-touch-icon.png?v=1',
