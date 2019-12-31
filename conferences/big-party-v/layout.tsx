@@ -29,7 +29,6 @@ export const Layout = (props: Props) => {
         />
 
         {/* AMP DEPS */}
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
         {ampDependencies}
         {ampStyles}
       </Head>
