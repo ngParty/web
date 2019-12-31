@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'
 
-import { theme } from './css-variables'
+import { theme } from './theme'
 
 export const styles = css.global`
   .conf-location {

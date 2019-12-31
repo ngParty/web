@@ -1,5 +1,5 @@
 import { styles, lightboxStyles } from './speakers.styles'
-import { theme } from './css-variables'
+import { theme } from './theme'
 import { TwitterIcon } from '../../components'
 
 interface SpeakerModel {

@@ -1,5 +1,6 @@
 import css from 'styled-jsx/css'
-import { theme } from './css-variables'
+
+import { theme } from './theme'
 
 const makeTextSquare = (top: number, unit = 'rem') => {
   return `

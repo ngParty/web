@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'
 
-import { theme } from './css-variables'
+import { theme } from './theme'
 
 const getAsset = (name: string) => `/img/big-party-v/${name}`
 

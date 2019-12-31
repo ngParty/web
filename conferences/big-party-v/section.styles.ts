@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'
 
-import { theme } from './css-variables'
+import { theme } from './theme'
 
 export const styles = css.global`
   .section {
@@ -23,10 +23,11 @@ export const styles = css.global`
     font-weight: 400;
     color: #48525c;
     font-size: 1.125rem;
+    width: 100%;
   }
   @media (min-width: ${theme.breakpoints.small}) {
     .section-title {
-      margin-left: 10rem;
+      margin-left: 15vw;
     }
   }
 

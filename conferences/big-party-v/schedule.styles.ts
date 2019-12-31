@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css'
 
-import { theme } from './css-variables'
+import { theme } from './theme'
 
 const listMarginLeft = 85
 const avatarMarginLeft = -(listMarginLeft - 10)
