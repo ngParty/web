@@ -1,5 +1,5 @@
 import { styles, lightboxStyles } from './speakers.styles'
-import { TwitterIcon } from '../../components'
+import { TwitterIcon, LinkedInIcon } from '../../components'
 
 interface SpeakerModel {
   id: string
@@ -35,9 +35,9 @@ const DATA: SpeakerModel[] = [
 
     He organizes revo.js conference & tim.js which is the local JavaScript meetup in Timisoara/RO.`,
     social: {
-      twitter: '',
+      twitter: 'https://twitter.com/pfeiffer_andrei',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/andreipfeiffer/',
     },
     talk: {
       title: 'Simple vs Easy',
@@ -61,7 +61,7 @@ const DATA: SpeakerModel[] = [
     social: {
       twitter: 'https://twitter.com/jawache',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/jawache/',
     },
     talk: {
       title: '12 Factor Green App',
@@ -83,7 +83,7 @@ const DATA: SpeakerModel[] = [
     social: {
       twitter: 'https://twitter.com/truesebi',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/sebastian-aigner/',
     },
     talk: {
       title: 'Kotlin goes Web! Exploring the JavaScript target for Kotlin',
@@ -107,7 +107,7 @@ const DATA: SpeakerModel[] = [
     social: {
       twitter: 'https://twitter.com/sebawita',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/sebawita/',
     },
     talk: {
       title: 'Building a chatbot for an Angular Application',
@@ -136,7 +136,7 @@ const DATA: SpeakerModel[] = [
     social: {
       twitter: 'https://twitter.com/ryyppy',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/patrick-stapfer-5ba205a4/',
     },
     talk: {
       title: 'The ReasonML Platform',
@@ -162,7 +162,7 @@ const DATA: SpeakerModel[] = [
     social: {
       twitter: 'https://twitter.com/boyanio',
       github: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/boyanio/',
     },
     talk: {
       title: 'TODO',
@@ -200,7 +200,8 @@ export const Speakers = () => {
 
 const Speaker = (props: { data: SpeakerModel }) => {
   const { data } = props
-  const twitter = formatTwitterHandle(data.social.twitter)
+  const { twitter, linkedin } = formatSocialHandles(data.social)
+
   const modalId = `lightbox-${data.id}`
   return (
     <>
@@ -239,9 +240,13 @@ const Speaker = (props: { data: SpeakerModel }) => {
               {data.jobTitle} <span>at {data.company}</span>
             </h3>
             <p className="lightbox-social">
-              <a href={twitter.url} target="_blank" rel="noopener noreferrer">
+              <a href={twitter.link} target="_blank" rel="noopener noreferrer">
                 <TwitterIcon width={'1em'} />
                 {twitter.label}
+              </a>
+              <a href={linkedin.link} target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon width={'1em'} />
+                {linkedin.label}
               </a>
             </p>
             <p className="lightbox-bio">{data.about}</p>
@@ -252,12 +257,30 @@ const Speaker = (props: { data: SpeakerModel }) => {
   )
 }
 
-const formatTwitterHandle = (twitterUrl: string) => {
-  const handle = twitterUrl.replace('https://twitter.com/', '@')
-  const link = twitterUrl
+const socialUrls = {
+  twitter: 'https://twitter.com/',
+  linkedin: 'https://www.linkedin.com/in/',
+  github: 'https://github.com/',
+}
+const formatSocialHandle = (
+  handleValue: string,
+  type: keyof typeof socialUrls
+) => {
+  const label = stripTrailingSlash(handleValue.replace(socialUrls[type], '@'))
+  const link = handleValue
+
   return {
-    label: handle,
-    url: link,
+    label,
+    link,
+  }
+}
+const formatSocialHandles = (
+  options: SpeakerModel['social']
+): Record<keyof SpeakerModel['social'], { link: string; label: string }> => {
+  return {
+    github: formatSocialHandle(options.github, 'github'),
+    twitter: formatSocialHandle(options.twitter, 'twitter'),
+    linkedin: formatSocialHandle(options.linkedin, 'linkedin'),
   }
 }
 
@@ -265,4 +288,8 @@ const transformSpeakerName = (name: string) => {
   const [firstName, lastName] = name.split(' ')
 
   return { firstName, lastName }
+}
+
+const stripTrailingSlash = (value: string) => {
+  return value.endsWith('/') ? value.slice(0, -1) : value
 }

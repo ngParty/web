@@ -143,6 +143,17 @@ export const lightboxStyles = css.global`
   }
   .lightbox-social {
   }
+  .lightbox-social a {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  .lightbox-social a:first-child {
+    margin-left: 0;
+  }
+  .lightbox-social a svg {
+    display: inline-block;
+    margin-right: 0.25em;
+  }
 
   .lightbox-bio {
     line-height: 1.6rem;
