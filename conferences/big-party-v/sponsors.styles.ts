@@ -6,15 +6,25 @@ export const styles = css.global`
     padding-top: 2vh;
     padding-bottom: 5vh;
     background: ${theme.colors.white};
+    text-align: center;
+  }
+  .sponsors p {
+    color: ${theme.colors.textLight};
+    line-height: 1.4em;
+  }
+  .sponsors strong {
+    color: ${theme.colors.textDark};
   }
   .sponsor-title {
-    text-align: center;
     margin: 3rem 0 0;
     font-size: 1.3rem;
   }
   .sponsor-join {
     text-align: center;
     margin-top: 4rem;
+  }
+  .sponsor-join > .content-small {
+    font-size: 0.9em;
   }
 
   .logos-list {

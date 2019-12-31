@@ -92,7 +92,7 @@ const Tickets = (props: { id: string; enable: boolean }) => {
         </a>
       ) : (
         <button className="btn btn--accent" disabled>
-          Available soon...
+          Tickets available soon...
         </button>
       )}
     </div>

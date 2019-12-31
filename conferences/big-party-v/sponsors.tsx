@@ -89,28 +89,34 @@ export const Sponsors = () => {
       </style>
 
       <div className="sponsors">
-        <SponsorList
-          title="Platinum Sponsor"
-          data={sponsorByType.sponsors.platinum}
-        />
-        <SponsorList title="Gold Sponsor" data={sponsorByType.sponsors.gold} />
-        <SponsorList
-          title="Silver Sponsor"
-          data={sponsorByType.sponsors.silver}
-        />
-        <SponsorList
-          title="Bronze Sponsor"
-          data={sponsorByType.sponsors.bronze}
-        />
+        <p>
+          We are very grateful and proud of our awesome sponsors.
+          <br />
+          This community gathering wouldn’t be possible without them.
+          <br />
+          <strong>Thank you!</strong>
+        </p>
+        <SponsorList title="Platinum" data={sponsorByType.sponsors.platinum} />
+        <SponsorList title="Gold" data={sponsorByType.sponsors.gold} />
+        <SponsorList title="Silver" data={sponsorByType.sponsors.silver} />
+        <SponsorList title="Bronze" data={sponsorByType.sponsors.bronze} />
 
         <div className="sponsor-join">
+          <p>
+            Would you like to support one of the best JavaScript community
+            events in Czechia?
+          </p>
+          <p className="content-small">
+            Supporting the conference is a great opportunity for you to present
+            your company in front of the community.
+          </p>
           <a
-            className="btn btn--secondary"
-            rel="noopener"
+            className="btn"
+            rel="noopener nofollow"
             target="_blank"
             href={becomeSponsorLink}
           >
-            Become a sponsor
+            Become a premium partner
           </a>
         </div>
       </div>
