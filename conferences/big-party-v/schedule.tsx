@@ -1,8 +1,9 @@
-import { styles } from './schedule.styles'
+import { Fragment } from 'react'
 
 import * as data from './data'
+import { styles } from './schedule.styles'
 
-const imgPlaceholder = '/img/big-party-v/meta/apple-touch-icon.png'
+const imgPlaceholder = '/big-party-v/meta/apple-touch-icon.png'
 const DATA: ScheduleItemModel[] = [
   {
     title: 'Registration',
@@ -316,7 +317,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
 
         {speakerBios.map((item, idx) => {
           return (
-            <>
+            <Fragment key={item.fullName}>
               <SpeakerLink
                 key={item.fullName}
                 link={item.link}
@@ -324,7 +325,7 @@ const ScheduleItem = (props: ScheduleItemModel) => {
                 company={item.company}
               />
               {isMultiple ? <br /> : null}
-            </>
+            </Fragment>
           )
         })}
         <div className="agenda-item-description-text">{speakerTalk}</div>

@@ -1,4 +1,5 @@
 import css from 'styled-jsx/css'
+
 import { theme } from './theme'
 
 export const styles = css.global`

@@ -1,13 +1,13 @@
 {
-    "name": "",
+    "name": "ngBigParty IV",
     "icons": [
         {
-            "src": "/static/img/icons/android-chrome-192x192.png",
+            "src": "/big-party-iv/meta/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/img/icons/android-chrome-384x384.png",
+            "src": "/big-party-iv/meta/android-chrome-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         }

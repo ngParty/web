@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'
 
 import { theme } from './theme'
 
-const getAsset = (name: string) => `/img/big-party-v/${name}`
+const getAsset = (name: string) => `/big-party-v/img/${name}`
 
 const borderPadding = {
   mobile: '0.35rem',

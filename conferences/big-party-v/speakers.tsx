@@ -27,7 +27,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'andrei-pfeiffer',
     name: 'Andrei Pfeiffer',
-    img: '/img/big-party-v/speakers/andrei.jpg',
+    img: '/big-party-v/img/speakers/andrei.jpg',
     company: '[e-spres-oh]',
     jobTitle: 'Code Designer',
     country: 'RO, Timisoara',
@@ -53,7 +53,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'asim-hussain',
     name: 'Asim Hussain',
-    img: '/img/big-party-v/speakers/asim.jpg',
+    img: '/big-party-v/img/speakers/asim.jpg',
     company: 'Microsoft',
     jobTitle: 'Green Cloud Advocacy Lead',
     country: 'UK, London',
@@ -75,7 +75,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'sebastian-aigner',
     name: 'Sebastian Aigner',
-    img: '/img/big-party-v/speakers/sebastian-a.jpg',
+    img: '/big-party-v/img/speakers/sebastian-a.jpg',
     company: 'JetBrains',
     jobTitle: 'Developer Advocate',
     country: 'DE, Munich',
@@ -99,7 +99,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'sebastian-witalec',
     name: 'Sebastian Witalec',
-    img: '/img/big-party-v/speakers/sebastian-w.jpg',
+    img: '/big-party-v/img/speakers/sebastian-w.jpg',
     company: 'Progress',
     jobTitle: 'Senior Developer Advocate',
     country: 'UK, London',
@@ -128,7 +128,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'patrick-stapfer',
     name: 'Patrick Stapfer',
-    img: '/img/big-party-v/speakers/patrick.jpg',
+    img: '/big-party-v/img/speakers/patrick.jpg',
     company: 'Reason Association',
     jobTitle: 'System Engineer',
     country: 'AT, Vienna',
@@ -154,7 +154,7 @@ const DATA: SpeakerModel[] = [
   {
     id: 'boyan-mihaylov',
     name: 'Boyan Mihaylov',
-    img: '/img/big-party-v/speakers/boyan.jpg',
+    img: '/big-party-v/img/speakers/boyan.jpg',
     company: 'Fadata',
     jobTitle: 'Software Architect and Developer',
     country: 'BG, Sofia',

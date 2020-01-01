@@ -18,7 +18,7 @@ export const Layout = (props: Props) => {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/img/icons/favicon.ico" />
+        <link rel="icon" href="/big-party-iv/meta/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
           rel="stylesheet"
@@ -129,7 +129,6 @@ export const Layout = (props: Props) => {
             bottom: -4px;
             left: 4px;
             background: #232323;
-            -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
             z-index: 1;
           }
@@ -173,10 +172,7 @@ export const Layout = (props: Props) => {
           }
 
           ${rootSelector} section${sectionSelector}.highlight .wrapper {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
           }
 
@@ -184,16 +180,12 @@ export const Layout = (props: Props) => {
             section${sectionSelector}.highlight
             .wrapper
             amp-iframe {
-            -webkit-box-flex: 1;
-            -ms-flex: 1 0 40%;
             flex: 1 0 40%;
             min-width: 100px;
           }
 
           ${rootSelector} section${sectionSelector}.highlight .wrapper div {
             margin-left: 2em;
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
             flex-grow: 1;
           }
 
@@ -278,11 +270,7 @@ export const Layout = (props: Props) => {
           ${rootSelector} ul.schedule > li {
             padding: 5px;
             padding-bottom: 10px;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: start;
-            -ms-flex-align: start;
             align-items: flex-start;
             position: relative;
           }
@@ -409,14 +397,10 @@ export const Layout = (props: Props) => {
 
           ${rootSelector} ul.workshops {
             list-style: none;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
           }
 
           ${rootSelector} ul.workshops li {
-            -webkit-box-flex: 1;
-            -ms-flex: 1 1 33%;
             flex: 1 1 33%;
             border-right: 1px solid #ddd;
           }
@@ -456,17 +440,12 @@ export const Layout = (props: Props) => {
           }
 
           ${rootSelector} ul.speakers li {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             min-height: 100px;
             margin-bottom: 40px;
           }
 
           ${rootSelector} ul.speakers li:nth-child(odd) {
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: reverse;
-            -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
           }
 
@@ -489,7 +468,6 @@ export const Layout = (props: Props) => {
             max-width: 250px;
             max-height: 250px;
             background: #fff;
-            -ms-flex-negative: 0;
             flex-shrink: 0;
             margin-right: 20px;
             position: relative;

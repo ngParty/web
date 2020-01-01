@@ -3,25 +3,25 @@ const DATA = {
   title: `ngBigParty V - JavaScript, Age of compilers and A.I.`,
   facebook: {
     id: 'ngPartyCz',
-    img: '/img/big-party-v/social/big-party-v-card.jpeg',
+    img: '/big-party-v/img/social/big-party-v-card.jpeg',
   },
   twitter: {
     id: '@ngPartyCz',
-    img: '/img/big-party-v/social/big-party-v-card.jpeg',
+    img: '/big-party-v/img/social/big-party-v-card.jpeg',
   },
   ico: '/favicon.ico?v=1',
   appleIco: {
-    maskIco: '/img/big-party-v/meta/safari-pinned-tab.svg?v=1',
-    touchIco: '/img/big-party-v/meta/apple-touch-icon.png?v=1',
+    maskIco: '/big-party-v/meta/safari-pinned-tab.svg?v=1',
+    touchIco: '/big-party-v/meta/apple-touch-icon.png?v=1',
     favicon: {
-      16: '/img/big-party-v/meta/favicon-16x16.png?v=1',
-      32: '/img/big-party-v/meta/favicon-32x32.png?v=1',
+      16: '/big-party-v/meta/favicon-16x16.png?v=1',
+      32: '/big-party-v/meta/favicon-32x32.png?v=1',
     },
   },
   microsoft: {
-    config: '/img/big-party-v/meta/browserconfig.xml?v=1',
+    config: '/big-party-v/meta/browserconfig.xml?v=1',
   },
-  manifest: '/img/big-party-v/meta/manifest.json',
+  manifest: '/big-party-v/meta/manifest.json',
 }
 
 export const Meta = (props: { theme: typeof import('./theme').theme }) => {
@@ -66,7 +66,7 @@ export const Meta = (props: { theme: typeof import('./theme').theme }) => {
       <meta property="og:image" content={DATA.facebook.id} />
       <meta property="og:description" content={DATA.description} />
       <meta property="og:type" content="website" />
-      {/* <meta property="og:url" content="" /> */}
+      <meta property="og:url" content="/big-party-v" />
 
       {/* Twitter meta */}
       <meta name="twitter:title" content={DATA.title} />

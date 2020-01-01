@@ -15,18 +15,18 @@ export const data = {
   partners: [
     {
       name: 'EmbedIT',
-      img: '/img/partners/embedit.png',
+      img: '/big-party-iv/img/partners/embedit.png',
     },
     {
       name: 'ClientIO',
-      img: '/img/partners/clientio.png',
+      img: '/big-party-iv/img/partners/clientio.png',
     },
   ],
   speakers: [
     {
       id: 'andrei-pfeiffer',
       name: 'Andrei Pfeiffer',
-      img: '/img/speakers/andrei.png',
+      img: '/big-party-iv/img/speakers/andrei.png',
       company: '[e-spres-oh]',
       country: 'RO',
       about: `Code Designer @[e-spres-oh], Mentor @[e-spres-oh] Academy,
@@ -48,7 +48,7 @@ export const data = {
     {
       id: 'jaroslav-minarik',
       name: 'Jaroslav Minařík',
-      img: '/img/speakers/jaroslav.png',
+      img: '/big-party-iv/img/speakers/jaroslav.png',
       company: 'MSD',
       country: 'CZ',
       about: `I like pizza!`,
@@ -69,7 +69,7 @@ export const data = {
     {
       id: 'james henry',
       name: 'James Henry',
-      img: '/img/speakers/james.jpg',
+      img: '/big-party-iv/img/speakers/james.jpg',
       company: 'UltimateAngular',
       country: 'UK',
       about: `Member of the ESLint Core Team, I am a TypeScript evangelist and
@@ -91,7 +91,7 @@ export const data = {
     {
       id: 'tereza-sokol',
       name: 'Tereza Sokol',
-      img: '/img/speakers/tereza.jpg',
+      img: '/big-party-iv/img/speakers/tereza.jpg',
       company: 'NoRedInk',
       country: 'DK',
       about: `I've been a frontend developer for about four years now and is
@@ -115,7 +115,7 @@ export const data = {
     {
       id: 'sebastian-frostl',
       name: 'Sebastian Fröstl',
-      img: '/img/speakers/sebastian.jpg',
+      img: '/big-party-iv/img/speakers/sebastian.jpg',
       company: 'Small Improvements',
       country: 'DE',
       about: `Team Lead. Software Engineer. Trainer. Coach. Devoted to
@@ -144,7 +144,7 @@ export const data = {
     {
       id: 'david-durman',
       name: 'David Durman',
-      img: '/img/speakers/david.jpg',
+      img: '/big-party-iv/img/speakers/david.jpg',
       company: 'clientIO',
       country: 'CZ',
       about: `Founder and CEO of client IO. @app_mixer, @jointjs,

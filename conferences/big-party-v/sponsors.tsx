@@ -8,7 +8,7 @@ interface SponsorModel {
   type: 'platinum' | 'gold' | 'silver' | 'bronze' | 'partner' | 'community'
 }
 
-const getImgPath = (img: string) => `/img/big-party-v/partners/${img}`
+const getImgPath = (img: string) => `/big-party-v/img/partners/${img}`
 
 const data: SponsorModel[] = [
   {
