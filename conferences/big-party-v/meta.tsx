@@ -63,7 +63,7 @@ export const Meta = (props: { theme: typeof import('./theme').theme }) => {
 
       {/* OGP meta */}
       <meta property="og:title" content={DATA.title} />
-      <meta property="og:image" content={DATA.facebook.id} />
+      <meta property="og:image" content={DATA.facebook.img} />
       <meta property="og:description" content={DATA.description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="/big-party-v" />
