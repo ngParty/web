@@ -37,16 +37,20 @@ const data: SponsorModel[] = [
   },
   {
     name: 'Microsoft',
-    img:
-      'https://revojs.ro/static/microsoft_logo-60d165cf89f3009a5efc5812682da17e.svg',
+    img: getImgPath('microsoft.svg'),
     link: 'https://www.microsoft.com',
     type: 'partner',
   },
   {
     name: 'Progress',
-    img:
-      'https://revojs.ro/static/progress_logo-1335a10f9cb65990ea338718d7d05c4e.svg',
+    img: getImgPath('progress.svg'),
     link: 'https://www.progress.com/',
+    type: 'partner',
+  },
+  {
+    name: 'Nrwl',
+    img: getImgPath('nrwl.svg'),
+    link: 'https://nrwl.io/',
     type: 'partner',
   },
   {
@@ -63,7 +67,7 @@ const data: SponsorModel[] = [
   },
   {
     name: 'LiveSport',
-    img: getImgPath('livesport.jpg'),
+    img: getImgPath('livesport.svg'),
     link: 'https://www.livesport.eu/',
     type: 'platinum',
   },
