@@ -1,28 +1,6 @@
-import { styles, lightboxStyles } from './speakers.styles'
-import { TwitterIcon, LinkedInIcon } from '../../components'
+import { styles } from './speakers.styles'
+import { PersonCard, SpeakerModel } from './shared'
 
-interface SpeakerModel {
-  id: string
-  name: string
-  img: string
-  company: string
-  jobTitle: string
-  country: string
-  about: string
-  social: {
-    twitter: string
-    github: string
-    linkedin: string
-  }
-  talk: {
-    title: string
-    abstract: string
-    media: {
-      slides: string
-      video: string
-    }
-  }
-}
 const DATA: SpeakerModel[] = [
   {
     id: 'andrei-pfeiffer',
@@ -181,14 +159,11 @@ export const Speakers = () => {
       <style jsx global>
         {styles}
       </style>
-      <style jsx global>
-        {lightboxStyles}
-      </style>
       <ul className="speaker-list">
         {DATA.map((item) => {
           return (
             <li key={item.id}>
-              <Speaker data={item} />
+              <PersonCard {...item} />
             </li>
           )
         })}
@@ -196,100 +171,4 @@ export const Speakers = () => {
       <p className="center">Stay tunned for more speaker announcements !</p>
     </>
   )
-}
-
-const Speaker = (props: { data: SpeakerModel }) => {
-  const { data } = props
-  const { twitter, linkedin } = formatSocialHandles(data.social)
-
-  const modalId = `lightbox-${data.id}`
-  return (
-    <>
-      <section
-        className="card card-speaker"
-        on={`tap:${modalId}`}
-        tabIndex={0}
-        role="button"
-      >
-        <amp-img
-          className="card-img"
-          layout="responsive"
-          src={data.img}
-          width="200"
-          height="200"
-        ></amp-img>
-        <div className="card-info">
-          <h2 className="card-heading">{data.name}</h2>
-          <p className="card-speaker-title">
-            {data.jobTitle}
-            <br />
-            <span className="card-speaker-company">at {data.company}</span>
-          </p>
-        </div>
-      </section>
-      <amp-lightbox id={modalId} layout="nodisplay">
-        <div
-          className="lightbox"
-          role="button"
-          on={`tap:${modalId}.close`}
-          tabIndex={0}
-        >
-          <div className="lightbox-content">
-            <h2 className="lightbox-headline">{data.name}</h2>
-            <h3 className="lightbox-subtitle">
-              {data.jobTitle} <span>at {data.company}</span>
-            </h3>
-            <p className="lightbox-social">
-              <a href={twitter.link} target="_blank" rel="noopener noreferrer">
-                <TwitterIcon width={'1em'} />
-                {twitter.label}
-              </a>
-              <a href={linkedin.link} target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon width={'1em'} />
-                {linkedin.label}
-              </a>
-            </p>
-            <p className="lightbox-bio">{data.about}</p>
-          </div>
-        </div>
-      </amp-lightbox>
-    </>
-  )
-}
-
-const socialUrls = {
-  twitter: 'https://twitter.com/',
-  linkedin: 'https://www.linkedin.com/in/',
-  github: 'https://github.com/',
-}
-const formatSocialHandle = (
-  handleValue: string,
-  type: keyof typeof socialUrls
-) => {
-  const label = stripTrailingSlash(handleValue.replace(socialUrls[type], '@'))
-  const link = handleValue
-
-  return {
-    label,
-    link,
-  }
-}
-const formatSocialHandles = (
-  options: SpeakerModel['social']
-): Record<keyof SpeakerModel['social'], { link: string; label: string }> => {
-  return {
-    github: formatSocialHandle(options.github, 'github'),
-    twitter: formatSocialHandle(options.twitter, 'twitter'),
-    linkedin: formatSocialHandle(options.linkedin, 'linkedin'),
-  }
-}
-
-const transformSpeakerName = (name: string) => {
-  const [firstName, lastName] = name.split(' ')
-
-  return { firstName, lastName }
-}
-
-const stripTrailingSlash = (value: string) => {
-  return value.endsWith('/') ? value.slice(0, -1) : value
 }
