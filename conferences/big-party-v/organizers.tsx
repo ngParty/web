@@ -1,23 +1,67 @@
 import { Fragment } from 'react'
 
 import { NgPartyIcon } from '../../components'
-import { styles } from './organizers.styles'
-import { LinkModel } from './data'
 
-const DATA: LinkModel[] = [
+import { LinkModel } from './data'
+import { PersonCard, OrganizerModel } from './shared'
+import { styles } from './organizers.styles'
+
+const DATA: OrganizerModel[] = [
   {
-    label: 'Martin Hochel',
-    link: 'https://www.linkedin.com/in/hochelmartin/',
+    id: 'martin-hochel',
+    name: 'Martin Hochel',
+    role: ['founder', 'organizer'],
+    img: '/big-party-v/img/organizers/martin.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/hochelmartin/',
+      twitter: 'https://twitter.com/martin_hotell',
+      github: '',
+    },
   },
   {
-    label: 'Mario Vejlupek',
-    link: 'https://www.linkedin.com/in/elmariofredo/',
+    id: 'tereza-vanek',
+    name: 'Tereza Vaňková',
+    role: ['organizer'],
+    img: '/big-party-v/img/organizers/tereza.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/tereza-vaňková-a02966165',
+      twitter: 'https://twitter.com/VanekTereza',
+      github: '',
+    },
   },
   {
-    label: 'Viliam Elischer',
-    link: 'https://www.linkedin.com/in/viliamelischer/',
+    id: 'viliam-elischer',
+    name: 'Viliam Elischer',
+    role: ['founder', 'organizer'],
+    img: '/big-party-v/img/organizers/viliam.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/viliamelischer/',
+      twitter: 'https://twitter.com/vireliam',
+      github: '',
+    },
+  },
+  {
+    id: 'mario-vejlupek',
+    name: 'Mario Vejlupek',
+    role: ['founder'],
+    img: '/big-party-v/img/organizers/mario.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/elmariofredo/',
+      twitter: 'https://twitter.com/mariovejlupek',
+      github: '',
+    },
   },
 ]
+
+const foundersData: LinkModel[] = DATA.filter((item) =>
+  item.role.includes('founder')
+).map((item) => {
+  return {
+    label: item.name,
+    link: item.social.linkedin,
+  }
+})
+
 export const Organizers = () => {
   return (
     <div className="organizers">
@@ -40,11 +84,11 @@ export const Organizers = () => {
               #JavaScript, #ForCommunityByCommunity, #devsUnited
             </code>
           </p>
-          <p className="organizer-bio">
+          <div>
             <h5>Founding members:</h5>
 
-            {DATA.map((item, idx) => {
-              const isLast = idx === DATA.length - 1
+            {foundersData.map((item, idx) => {
+              const isLast = idx === foundersData.length - 1
               return (
                 <Fragment key={idx}>
                   <a href={item.link} target="_blank" rel="noreferrer nofollow">
@@ -54,9 +98,29 @@ export const Organizers = () => {
                 </Fragment>
               )
             })}
-          </p>
+          </div>
         </div>
       </section>
+      <section className="organizer-team-section">
+        <OrganizersTeam />
+      </section>
     </div>
+  )
+}
+
+const OrganizersTeam = () => {
+  return (
+    <>
+      <h2 className="center text-light">Meet the team</h2>
+      <ul className="speaker-list">
+        {DATA.map((item) => {
+          return (
+            <li key={item.id}>
+              <PersonCard {...item} />
+            </li>
+          )
+        })}
+      </ul>
+    </>
   )
 }
