@@ -37,7 +37,7 @@ const dataSocial: LinkModel[] = [
   },
   {
     label: 'github',
-    link: 'https://twitter.com/ngPartyCz',
+    link: 'https://github.com/ngParty',
   },
   {
     label: 'linkedin',
