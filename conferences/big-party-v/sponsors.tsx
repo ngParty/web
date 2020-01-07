@@ -13,13 +13,13 @@ const getImgPath = (img: string) => `/big-party-v/img/partners/${img}`
 const data: SponsorModel[] = [
   {
     name: 'JetBrains',
-    img: getImgPath('jetbrains.jpg'),
+    img: getImgPath('jetbrains.svg'),
     link: 'https://www.jetbrains.com/',
     type: 'silver',
   },
   {
     name: 'Socialbakers',
-    img: getImgPath('socialbakers.jpg'),
+    img: getImgPath('socialbakers.svg'),
     link: 'https://www.socialbakers.com',
     type: 'gold',
   },
@@ -55,13 +55,13 @@ const data: SponsorModel[] = [
   },
   {
     name: 'React Girls',
-    img: getImgPath('reactgirls.jpg'),
+    img: getImgPath('reactgirls.svg'),
     link: 'https://www.reactgirls.com/',
     type: 'community',
   },
   {
     name: 'Tim.js',
-    img: getImgPath('tim-js.jpg'),
+    img: getImgPath('tim-js.svg'),
     link: 'https://www.meetup.com/tim-js/',
     type: 'community',
   },
