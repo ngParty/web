@@ -139,7 +139,7 @@ export const styles = css`
 
   .about-content {
     color: ${theme.colors.textLight};
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.4;
   }
 `

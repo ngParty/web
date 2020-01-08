@@ -15,10 +15,10 @@ const DATA = {
     track: 1,
     speaker: 10,
   },
-  about: `ngBigParty is the JavaScript conference for everyone. We roam on the
-  edges of the ecosystem to see what lies beyond our day to day work.
-  To become better developers and better humans. We are independent,
-  community-driven, affordable and inclusive.`,
+  about: `ngBigParty is the largest community conference focused on JavaScript in Czechia.
+  The 5th edition will feature talks from international experts with in-depth talks about various next-gen topics from JavaScript world focused on compilers and A.I.
+  Join us for an unforgettable day full of technology, networking with local community and much more in beautiful Prague!
+  `,
 }
 
 export const Intro = () => {

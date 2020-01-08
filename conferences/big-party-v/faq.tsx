@@ -27,11 +27,23 @@ const DATA: FaqModel[] = [
   },
   {
     question: 'Does it cost anything?',
-    answer: `Yes. Although this is a non profit community event, we need some money to make it happen.`,
+    answer: `Yes. Although this is a non profit community event, we need funds to make it happen.`,
   },
   {
     question: 'Will it possible to buy batch tickets?',
     answer: `Yes. Please drop us an email.`,
+  },
+  {
+    question: 'Will there be CFP?',
+    answer: `No. We are doing our own research and handpicking all speakers personally.`,
+  },
+  {
+    question: 'Is this conference only about Angular?',
+    answer: `No. While ng is known as Angular abbreviation in the JS world ngParty stands for NextGeneration Party.`,
+  },
+  {
+    question: 'I found a bug on this web, how can I report it?',
+    answer: `Everything we do is for community, thus this web is open sourced! Please fill an issue or send a PR! ❤️`,
   },
 ]
 
