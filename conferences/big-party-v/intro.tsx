@@ -16,7 +16,7 @@ const DATA = {
     speaker: 10,
   },
   about: `ngBigParty is the largest community conference focused on JavaScript in Czechia.
-  The 5th edition will feature talks from international experts with in-depth talks about various next-gen topics from JavaScript world focused on compilers and A.I.
+  The 5th edition will feature international experts with in-depth talks about various next-generation topics from JavaScript world focused on compilers and A.I.<br/>
   Join us for an unforgettable day full of technology, networking with local community and much more in beautiful Prague!
   `,
 }
@@ -42,7 +42,10 @@ export const Intro = () => {
         </section>
 
         <section className="about">
-          <p className="about-content">{DATA.about}</p>
+          <p
+            className="about-content"
+            dangerouslySetInnerHTML={{ __html: DATA.about }}
+          />
           <AboutInNumbers data={DATA.aboutInNumbers} />
           <Tickets id="tickets" enable={data.config.enableTickets} />
         </section>
