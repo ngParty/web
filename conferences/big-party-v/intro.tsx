@@ -1,6 +1,7 @@
 import * as data from './data'
 
 import { styles, aboutNumbersStyles, ticketsStyles } from './intro.styles'
+import { Gallery } from './gallery'
 
 const DATA = {
   title: 'ngBigParty V',
@@ -48,6 +49,10 @@ export const Intro = () => {
           />
           <AboutInNumbers data={DATA.aboutInNumbers} />
           <Tickets id="tickets" enable={data.config.enableTickets} />
+        </section>
+
+        <section className="gallery">
+          <Gallery />
         </section>
       </div>
     </>
