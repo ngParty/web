@@ -126,7 +126,7 @@ export const styles = css`
     flex-wrap: wrap;
 
     padding: 0 7vw 2vh;
-    margin: 0 auto 50px;
+    margin: 0 auto;
   }
   .about > * {
     width: 100%;
@@ -141,6 +141,10 @@ export const styles = css`
     color: ${theme.colors.textLight};
     font-size: 1.3rem;
     line-height: 1.4;
+  }
+
+  .gallery {
+    padding-bottom: 2vh;
   }
 `
 
