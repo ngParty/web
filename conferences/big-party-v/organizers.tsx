@@ -70,7 +70,7 @@ export const Organizers = () => {
       </style>
       <section className="organizer-section">
         <h3 className="organizer-logo">
-          <a href="//ngparty.cz">
+          <a href="/">
             <NgPartyIcon />
           </a>
         </h3>
