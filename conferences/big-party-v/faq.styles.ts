@@ -6,8 +6,7 @@ export const styles = css.global`
   .faq-content {
     padding: 24px 0 0;
     list-style: none;
-    margin: 0 auto;
-    max-width: 75%;
+    ${theme.mixins.centerMaxWidth()}
   }
   .faq-content-item {
   }
