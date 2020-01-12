@@ -48,4 +48,17 @@ export const stylesUtils = css.global`
   .text-dark {
     color: ${theme.colors.textDark};
   }
+
+  .link {
+    transition: border-color ease-out 250ms;
+    color: ${theme.colors.accent};
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .link:hover {
+    border-color: ${theme.colors.accent};
+  }
+  .text-content {
+    line-height: 1.6;
+  }
 `

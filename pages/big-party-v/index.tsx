@@ -11,6 +11,7 @@ import {
   Speakers,
   Organizers,
   Faq,
+  Tickets,
 } from '../../conferences/big-party-v'
 
 export const config: import('next').PageConfig = { amp: true }
@@ -54,6 +55,9 @@ const BigPartyV = () => {
           </Section>
           <Section title="Schedule" id="schedule">
             <Schedule />
+          </Section>
+          <Section title="Get Tickets" id="tickets">
+            <Tickets />
           </Section>
           <Section title="Venue" id="venue">
             <Venue />
