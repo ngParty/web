@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 
 import * as data from './data'
 import { styles } from './schedule.styles'
+import { Fragment } from 'react'
 
 const imgPlaceholder = '/big-party-v/meta/apple-touch-icon.png'
 const DATA: ScheduleItemModel[] = [
