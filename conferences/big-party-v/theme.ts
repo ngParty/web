@@ -12,6 +12,9 @@ const colors = {
   white: '#fff',
   black: '#000',
 }
+const shadow = {
+  main: '0 15px 25px 0 rgba(0, 0, 0, 0.15)',
+}
 
 const breakpoints = {
   small: '576px',
@@ -27,8 +30,19 @@ const sizes = {
   maxWidthContent: '1440px',
 }
 
+const mixins = {
+  centerMaxWidth(maxWidth = '75%') {
+    return `
+      margin: 0 auto;
+      max-width: ${maxWidth};
+  `
+  },
+}
+
 export const theme = {
   colors,
   breakpoints,
   sizes,
+  shadow,
+  mixins,
 }
