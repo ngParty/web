@@ -23,7 +23,7 @@ export const styles = css.global`
   }
   @media(min-width: ${theme.breakpoints.medium}){
     .speaker-list > li {
-      width: 50%;
+      max-width: 50%;
       padding: 0 2vw 4vw;
     }
   }

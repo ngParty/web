@@ -104,6 +104,28 @@ const DATA: SpeakerModel[] = [
     },
   },
   {
+    id: 'natalia-vokrouhlecka',
+    name: 'Natalia Vokrouhlecká',
+    img: '/big-party-v/img/speakers/natalia.jpg',
+    company: 'MSD',
+    jobTitle: 'Web Developer',
+    country: 'CZ, Prague',
+    about: `Natalia is a web developer. She is passionate about teaching children programming and organising workshops for developers.`,
+    social: {
+      twitter: '',
+      github: '',
+      linkedin: 'https://www.linkedin.com/in/nataliavokrouhlecka/',
+    },
+    talk: {
+      title: 'Programming for children - tips and tricks',
+      abstract: `How to teach children programming? How to make sure that the children enjoy it, stay curious, creative and express themselves? Let's hear some tips from a developers who has been teaching children programming using Scratch and Ozobots. `,
+      media: {
+        slides: '',
+        video: '',
+      },
+    },
+  },
+  {
     id: 'patrick-stapfer',
     name: 'Patrick Stapfer',
     img: '/big-party-v/img/speakers/patrick.jpg',
