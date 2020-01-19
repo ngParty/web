@@ -46,7 +46,6 @@ const dataSocial: LinkModel[] = [
 ]
 const dataMore: LinkModel[] = data.links.more
 const dataEmail = data.links.contact.email
-const currentYear = new Date().getFullYear()
 
 export const Footer = () => {
   return (
@@ -71,7 +70,7 @@ export const Footer = () => {
           </a>
         </div>
       </nav>
-      <Copyright year={String(currentYear)} />
+      <Copyright year={String(data.currentYear)} />
     </footer>
   )
 }

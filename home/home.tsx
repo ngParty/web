@@ -6,7 +6,7 @@ import normalizeCss from '../components/normalize.css'
 
 import { globalStyles } from './theme.styles'
 import { styles } from './home.styles'
-import { DATA } from './data'
+import { data } from './data'
 
 export const Home = () => (
   <>
@@ -90,7 +90,7 @@ const MainNav = () => {
   return (
     <nav className="nav">
       <ul>
-        {DATA.navigation.map((item) => {
+        {data.navigation.map((item) => {
           return (
             <li key={item.label}>
               <a href={item.link}>{item.label}</a>
@@ -106,8 +106,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <FooterNavigation title="ngParty" data={DATA.navigation} />
-        <FooterNavigation title="More" data={DATA.more} />
+        <FooterNavigation title="ngParty" data={data.navigation} />
+        <FooterNavigation title="More" data={data.more} />
       </div>
       <div className="footer-wrapper">
         <div className="footer-wrapper-left">
@@ -121,11 +121,11 @@ const Footer = () => {
           </span>
           <span className="copyright">
             <span className="text">
-              <a href={DATA.contact.email.link}>{DATA.contact.email.label}</a>
+              <a href={data.contact.email.link}>{data.contact.email.label}</a>
             </span>
             <span> — </span>
-            <span className="text">Copyright</span> &copy; 2019 ngParty, All
-            rights reserved.
+            <span className="text">Copyright</span> &copy; {data.currentYear}{' '}
+            ngParty, All rights reserved.
           </span>
         </div>
       </div>
@@ -163,7 +163,7 @@ const FooterSocial = () => {
 
   return (
     <ul className="footer-social">
-      {DATA.social.map((item) => {
+      {data.social.map((item) => {
         const icon = icons[item.id]
 
         return (

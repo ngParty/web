@@ -1,5 +1,5 @@
-import { data } from '../shared'
-export const DATA = {
+import { data as sharedData } from '../shared'
+export const data = {
   navigation: [
     {
       label: 'Meetups',
@@ -18,7 +18,7 @@ export const DATA = {
       link: '//github.com/ngparty',
     },
   ],
-  more: data.links.more,
+  more: sharedData.links.more,
   social: [
     {
       id: 'twitter',
@@ -31,5 +31,6 @@ export const DATA = {
       link: '//github.com/ngparty',
     },
   ] as const,
-  contact: data.links.contact,
+  contact: sharedData.links.contact,
+  currentYear: sharedData.currentYear,
 }

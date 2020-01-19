@@ -17,6 +17,9 @@ const links = {
   ],
 }
 
+const currentYear = new Date().getFullYear()
+
 export const data = {
   links,
+  currentYear,
 }
