@@ -8,7 +8,7 @@ const links = {
   more: [
     {
       label: 'Code of Conduct',
-      link: 'https://confcodeofconduct.com/',
+      link: 'https://github.com/ngParty/web/blob/master/COC.md',
     },
     {
       label: 'Brand Materials',
