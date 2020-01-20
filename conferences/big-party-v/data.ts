@@ -36,10 +36,13 @@ export const navigation: NavItemModel[] = [
     link: '#organizers',
   },
 ]
+const links = {
+  tickets: 'http://bit.ly/ng-bigparty-v-tickets',
+}
 
 const config = {
   enableSchedule: true,
-  enableTickets: false,
+  enableTickets: true,
 }
 
-export { data, config }
+export { data, config, links }

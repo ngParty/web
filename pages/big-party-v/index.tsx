@@ -12,6 +12,7 @@ import {
   Organizers,
   Faq,
   Tickets,
+  config as settings,
 } from '../../conferences/big-party-v'
 
 export const config: import('next').PageConfig = { amp: true }
@@ -56,9 +57,11 @@ const BigPartyV = () => {
           <Section title="Schedule" id="schedule">
             <Schedule />
           </Section>
-          <Section title="Get Tickets" id="tickets">
-            <Tickets />
-          </Section>
+          {settings.enableTickets ? (
+            <Section title="Get Tickets" id="tickets">
+              <Tickets />
+            </Section>
+          ) : null}
           <Section title="Venue" id="venue">
             <Venue />
           </Section>

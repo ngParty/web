@@ -1,5 +1,6 @@
 import { styles } from './tickets.styles'
 import { data } from '../../shared'
+import { links } from './data'
 
 interface TicketModel {
   type: string
@@ -19,18 +20,18 @@ const currDate = new Date()
 const DATA: TicketModel[] = [
   {
     type: 'Early bird',
-    link: 'http://bit.ly/ng-bigparty-v-tickets',
+    link: links.tickets,
     currency: 'CZK',
     price: 2350,
     vatPercentage: 0,
-    date: '2020-02-04T08:00:00.000Z',
+    date: '2020-02-04T07:00:00.000Z',
     soldOut: false,
     description: `A limited selection of early bird tickets.
     Ticket price includes all refreshments and food during the conference, as well as entrance to the after-party get-together.`,
   },
   {
     type: 'Regular',
-    link: 'http://bit.ly/ng-bigparty-v-tickets',
+    link: links.tickets,
     currency: 'CZK',
     price: 3450,
     vatPercentage: 0,
@@ -40,11 +41,11 @@ const DATA: TicketModel[] = [
   },
   {
     type: 'Late bird',
-    link: 'http://bit.ly/ng-bigparty-v-tickets',
+    link: links.tickets,
     currency: 'CZK',
     price: 4550,
     vatPercentage: 0,
-    date: '2020-04-07T07:59:00.000Z',
+    date: '2020-04-07T06:59:00.000Z',
     soldOut: false,
     description: `Made your decision on short notice and missed the Early Bird and
     Regular Tickets? No worries! There is never to late for solid JavaScript content right? We still have some seats left.

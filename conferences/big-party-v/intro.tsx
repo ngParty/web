@@ -95,7 +95,11 @@ const Tickets = (props: { id: string; enable: boolean }) => {
     <div id={id} className="about-action">
       <style jsx>{ticketsStyles}</style>
       {enable ? (
-        <a className="btn btn--accent" href="" target="_blank">
+        <a
+          className="btn btn--accent"
+          href={data.links.tickets}
+          target="_blank"
+        >
           Get Tickets
         </a>
       ) : (
