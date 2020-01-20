@@ -1,7 +1,7 @@
 import { styles, sidebarStyles } from './header.styles'
 import { NgPartyIcon } from '../../components'
 
-import { navigation as DATA, NavItemModel } from './data'
+import { navigation as DATA, NavItemModel, links } from './data'
 import { ReactElement } from 'react'
 
 export const Header = () => {
@@ -30,7 +30,7 @@ export const Header = () => {
         <MainNav data={DATA} />
 
         <div className="headerbar-action center m0 p0 flex justify-center nowrap">
-          <BuyTicketsAction link="#tickets" />
+          <BuyTicketsAction link={links.tickets} />
         </div>
       </header>
 
@@ -129,7 +129,11 @@ const BuyTicketsAction = (
 ) => {
   const { link } = props
   return (
-    <a href={link} className="text-decoration-none headerbar-action-link">
+    <a
+      target="_blank"
+      href={link}
+      className="text-decoration-none headerbar-action-link"
+    >
       Tickets
     </a>
   )
