@@ -51,6 +51,34 @@ const DATA: SpeakerModel[] = [
     },
   },
   {
+    id: 'lian-li',
+    name: 'Lian Li',
+    img: '/big-party-v/img/speakers/lian-li.jpg',
+    company: 'Container Solutions',
+    jobTitle: 'Cloud Native Consultant',
+    country: 'NL, Amsterdam',
+    about: `Lian always wanted to save the world.
+    After a failed attempt at becoming a lawyer, she decided to do something with computers instead. Working as a Fullstack Software Engineer, she got into attending tech events and giving talks on Machine Learning with JavaScript all around the world. She fell in love with the tech community, which led to her co-organising the community conference ServerlessDays Amsterdam.
+    Currently, Lian lives in Amsterdam and works as Cloud Native Engineer at Container Solutions, a consultancy focused on programmable infrastructure.
+    `,
+    social: {
+      twitter: 'https://twitter.com/Chimney42',
+      github: '',
+      linkedin: 'https://www.linkedin.com/in/lian-li/',
+    },
+    talk: {
+      title: 'Machine Learning in the browser',
+      abstract: `Even if you've never done anything with machine learning, you have probably already heard that it's very powerful, adaptive and will change our way of thinking about computing forever.
+      But how can you, a web developer, who's never been interested much in statistics benefit from the ML hype?
+      In this talk I want to give you the tools to build a small self-learning application that runs completely in the browser with tensorflowJS
+      `,
+      media: {
+        slides: '',
+        video: '',
+      },
+    },
+  },
+  {
     id: 'sebastian-aigner',
     name: 'Sebastian Aigner',
     img: '/big-party-v/img/speakers/sebastian-a.jpg',
@@ -145,6 +173,28 @@ const DATA: SpeakerModel[] = [
       Other programming language communities might have been observing the language carefully from the distance, but probably never had a real motivation of trying it out. This talk will give some insights on the language, the ecosystem, distinct features and will also highlight some recent accomplishments and milestones within the Reason community.
 
       In the end attendees will understand why Reason users are excited about the language and what sets it apart from other similar looking ecosystems and may be even interested in trying it out themselves.`,
+      media: {
+        slides: '',
+        video: '',
+      },
+    },
+  },
+  {
+    id: 'li-hau-tan',
+    name: 'Li Hau Tan',
+    img: '/big-party-v/img/speakers/li-hau-tan.jpg',
+    company: 'Shopee',
+    jobTitle: 'Expert Engineer',
+    country: 'SG, Singapore',
+    about: `Originally from Malaysia, Li Hau is an expert engineer at Shopee, Svelte core member and Babel contributor. He is a polyglot. He speaks Chinese, English, Malay, JavaScript, CSS, and HTML. In his free time, he writes about JavaScript frameworks and tools.`,
+    social: {
+      twitter: 'https://twitter.com/lihautan',
+      github: '',
+      linkedin: 'https://www.linkedin.com/in/lihautan/',
+    },
+    talk: {
+      title: 'TODO',
+      abstract: `TODO`,
       media: {
         slides: '',
         video: '',
