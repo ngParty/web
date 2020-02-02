@@ -48,9 +48,15 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
-    name: 'Progress',
+    name: 'e-spres-oh',
     img: getImgPath('e-spres-oh.svg'),
     link: 'https://www.e-spres-oh.com/',
+    type: 'partner',
+  },
+  {
+    name: 'Container solutions',
+    img: getImgPath('container-solutions.svg'),
+    link: 'https://www.container-solutions.com/',
     type: 'partner',
   },
   {

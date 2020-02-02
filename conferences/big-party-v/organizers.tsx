@@ -42,6 +42,17 @@ const DATA: OrganizerModel[] = [
     },
   },
   {
+    id: 'aneta-hochel',
+    name: 'Aneta Hochel',
+    role: ['organizer'],
+    img: '/big-party-v/img/organizers/anet.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/anetacerna/',
+      twitter: 'https://twitter.com/Anetaern',
+      github: '',
+    },
+  },
+  {
     id: 'mario-vejlupek',
     name: 'Mario Vejlupek',
     role: ['founder'],
