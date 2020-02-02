@@ -15,19 +15,20 @@ interface PersonModel {
   img: string
   social: SocialLinks
 }
+interface SpeakerTalkModel {
+  title: string
+  abstract: string
+  media: {
+    slides: string
+    video: string
+  }
+}
 export interface SpeakerModel extends PersonModel {
   company: string
   jobTitle: string
   country: string
   about: string
-  talk: {
-    title: string
-    abstract: string
-    media: {
-      slides: string
-      video: string
-    }
-  }
+  talk: SpeakerTalkModel
 }
 export interface OrganizerModel extends PersonModel {
   role: Array<'founder' | 'organizer'>
@@ -137,10 +138,12 @@ type PersonLightBoxProps = {
   company: string
   about: string
   social: NormalizedSocialLinkMap
+  talk: SpeakerTalkModel
 }
 const PersonLightbox = (props: PersonLightBoxProps) => {
-  const { id, name: fullName, jobTitle, company, about, social } = props
+  const { id, name: fullName, jobTitle, company, about, social, talk } = props
   const handleTapClose = `tap:${id}.close`
+  const hasTalkReady = Boolean(talk.title)
 
   return (
     <amp-lightbox id={id} layout="nodisplay">
@@ -154,6 +157,19 @@ const PersonLightbox = (props: PersonLightBoxProps) => {
             <SocialLinkList data={social} showLabel />
           </p>
           <p className="lightbox-bio">{about}</p>
+
+          {hasTalkReady ? (
+            <section className="lightbox-talk">
+              <h2 className="lightbox-talk__title">
+                <small title="Talk title">🎤 </small>
+                {talk.title}
+              </h2>
+              <div
+                className="lightbox-talk__abstract"
+                dangerouslySetInnerHTML={{ __html: talk.abstract }}
+              />
+            </section>
+          ) : null}
         </div>
       </div>
     </amp-lightbox>

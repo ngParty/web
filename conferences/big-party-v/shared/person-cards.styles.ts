@@ -64,6 +64,7 @@ export const lightboxStyles = css.global`
     line-height: 1.6rem;
     font-weight: 400;
     color: #48525c;
+    border-top: 1px solid gray;
   }
 `
 

@@ -118,12 +118,15 @@ const DATA: SpeakerModel[] = [
     talk: {
       title: 'Building a chatbot for an Angular Application',
       abstract: `Chatbots introduce a whole new way for users to interact with your websites. A good chatbot can save your users from long and complicated forms, cut down on support requests, and make your services more approachable.
-      If you've ever wondered how to build a chatbot, then this session is for you. You will:
-
-      * Dive into the core concepts of what makes a chatbot.
-      * Learn how to employ Machine Learning and Natural Language Processing to create a conversation flow that feels 100% natural.
-      * Look at a variety of possible conversations and challenges that go with them.
-
+      If you've ever wondered how to build a chatbot, then this session is for you.
+      <br/>
+      You will:
+      <ul>
+      <li>Dive into the core concepts of what makes a chatbot.</li>
+      <li>Learn how to employ Machine Learning and Natural Language Processing to create a conversation flow that feels 100% natural.</li>
+      <li>Look at a variety of possible conversations and challenges that go with them.</li>
+      </ul>
+      <br/>
       But more importantly, you will learn how to build a fully functioning chatbot and add it to your Angular app in less than 15 minutes—all without a single IF statement.`,
       media: {
         slides: '',
@@ -220,8 +223,8 @@ const DATA: SpeakerModel[] = [
       linkedin: 'https://www.linkedin.com/in/lihautan/',
     },
     talk: {
-      title: 'TODO',
-      abstract: `TODO`,
+      title: '',
+      abstract: ``,
       media: {
         slides: '',
         video: '',
@@ -242,8 +245,8 @@ const DATA: SpeakerModel[] = [
       linkedin: 'https://www.linkedin.com/in/boyanio/',
     },
     talk: {
-      title: 'TODO',
-      abstract: `TODO`,
+      title: 'Rockstar compilation to WebAssembly',
+      abstract: `WebAssembly allows us to compile code in C/C++/Rust and run it in the browser with near-native performance. With time, more programming languages introduce such compilation support, which establishes WebAssembly as an universal intermediary language. In this talk, we will examine the compilation process to WebAssembly by using code written in one of the newest programming languages - Rockstar. We will go deeper into WebAssembly's architecture to see how it is designed to evolve in the future compared to JavaScript.`,
       media: {
         slides: '',
         video: '',
