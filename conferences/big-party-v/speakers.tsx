@@ -132,6 +132,33 @@ const DATA: SpeakerModel[] = [
     },
   },
   {
+    id: 'lili-kastilio',
+    name: 'Lili Kastilio',
+    img: '/big-party-v/img/speakers/lili.jpg',
+    company: 'Snyk',
+    jobTitle: 'Lead Engineer',
+    country: 'UK, London',
+    about: `Full Stack engineer and Team Lead at Snyk, working on extending our current languages offering by introducing new languages and language specific concepts into our system in a shape of libs, parsers and microservices. Spending lots of time working on dependency resolution, understanding the inner workings of package managers and integrating with package registries. Apart from coding I love learning circus skills, you will often find me swinging on a flying trapeze after work.`,
+    social: {
+      twitter: 'https://twitter.com/lilianakastilio',
+      github: '',
+      linkedin: 'https://www.linkedin.com/in/kastilioliliana/',
+    },
+    talk: {
+      title: 'Lessons learned converting Snyk codebase to TypeScript',
+      abstract: `Snyk have recently converted their entire codebase to TypeScript, Lili would like to share the reasons, motivations and lesson learned with others thinking to do the same.
+      There have been wins and bumps along the way but overall they left their codebase in a much better place than ever before.
+
+      Lili would also like to share where they got to so far, what slowed them down in some places and what is their plan to complete the migration to 100% of the codebase.
+
+      Many companies are thinking of using TypeScript but may be scared to do so, Lili hope this talk can share some insight into what this journey is like.`,
+      media: {
+        slides: '',
+        video: '',
+      },
+    },
+  },
+  {
     id: 'natalia-vokrouhlecka',
     name: 'Natalia Vokrouhlecká',
     img: '/big-party-v/img/speakers/natalia.jpg',
@@ -226,6 +253,8 @@ const DATA: SpeakerModel[] = [
 ]
 
 export const Speakers = () => {
+  const fullSpeakerCount = 10
+  const allSpeakersAnnounced = DATA.length >= fullSpeakerCount
   return (
     <>
       <style jsx global>
@@ -240,7 +269,9 @@ export const Speakers = () => {
           )
         })}
       </ul>
-      <p className="center">Stay tunned for more speaker announcements !</p>
+      {allSpeakersAnnounced ? null : (
+        <p className="center">Stay tunned for more speaker announcements !</p>
+      )}
     </>
   )
 }
