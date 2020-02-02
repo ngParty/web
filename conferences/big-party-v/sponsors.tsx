@@ -78,6 +78,12 @@ const data: SponsorModel[] = [
     type: 'community',
   },
   {
+    name: 'Vue.js Prague',
+    img: getImgPath('vue-prague.svg'),
+    link: 'https://vuejs.cz/',
+    type: 'community',
+  },
+  {
     name: 'LiveSport',
     img: getImgPath('livesport.svg'),
     link: 'https://www.livesport.eu/',
