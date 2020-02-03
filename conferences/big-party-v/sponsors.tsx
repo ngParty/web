@@ -90,6 +90,12 @@ const data: SponsorModel[] = [
     type: 'community',
   },
   {
+    name: 'JS Heroes',
+    img: getImgPath('js-heroes.svg'),
+    link: 'https://jsheroes.io',
+    type: 'community',
+  },
+  {
     name: 'Vue.js Prague',
     img: getImgPath('vue-prague.svg'),
     link: 'https://vuejs.cz/',
