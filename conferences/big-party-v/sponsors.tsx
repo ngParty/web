@@ -96,6 +96,12 @@ const data: SponsorModel[] = [
     type: 'community',
   },
   {
+    name: 'TSconf eu',
+    img: getImgPath('tsconf-eu.svg'),
+    link: 'https://tsconf.eu',
+    type: 'community',
+  },
+  {
     name: 'Vue.js Prague',
     img: getImgPath('vue-prague.svg'),
     link: 'https://vuejs.cz/',
