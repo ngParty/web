@@ -25,7 +25,7 @@ const DATA: TicketModel[] = [
     price: 2350,
     vatPercentage: 0,
     date: '2020-02-04T07:00:00.000Z',
-    soldOut: false,
+    soldOut: true,
     description: `A limited selection of early bird tickets.
     Ticket price includes all refreshments and food during the conference, as well as entrance to the after-party get-together.`,
   },
