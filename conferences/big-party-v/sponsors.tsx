@@ -42,6 +42,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Techtaboo',
+    img: getImgPath('techtaboo.svg'),
+    link: 'https://www.youtube.com/channel/UCJdX6oFnV6NH7SzKhmNZHDg',
+    type: 'partner',
+  },
+  {
     name: 'Reason Association',
     img: getImgPath('reason-association.jpg'),
     link: 'https://reason-association.org',
@@ -75,6 +81,12 @@ const data: SponsorModel[] = [
     name: 'Nrwl',
     img: getImgPath('nrwl.svg'),
     link: 'https://nrwl.io/',
+    type: 'partner',
+  },
+  {
+    name: 'Goout',
+    img: getImgPath('goout.svg'),
+    link: 'https://goout.net/',
     type: 'partner',
   },
   {
