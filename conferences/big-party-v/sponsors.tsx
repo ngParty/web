@@ -90,6 +90,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Orea Hotels',
+    img: getImgPath('orea.svg'),
+    link: 'https://www.orea.cz/',
+    type: 'partner',
+  },
+  {
     name: 'React Girls',
     img: getImgPath('reactgirls.svg'),
     link: 'https://www.reactgirls.com/',
