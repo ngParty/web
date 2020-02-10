@@ -78,6 +78,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Sticker Mule',
+    img: getImgPath('sticker-mule.svg'),
+    link: 'http://stickermule.com/supports/ngbigparty20-sponsorship',
+    type: 'partner',
+  },
+  {
     name: 'Nrwl',
     img: getImgPath('nrwl.svg'),
     link: 'https://nrwl.io/',
@@ -120,11 +126,24 @@ const data: SponsorModel[] = [
     type: 'community',
   },
   {
+    name: 'Czechitas',
+    img: getImgPath('czechitas.svg'),
+    link: 'https://www.czechitas.cz/',
+    type: 'community',
+  },
+  {
     name: 'Vue.js Prague',
     img: getImgPath('vue-prague.svg'),
     link: 'https://vuejs.cz/',
     type: 'community',
   },
+  // {
+  //   name: 'GatsbyJS Prague',
+  //   img:
+  //     'https://secure.meetupstatic.com/photos/event/4/f/4/5/600_485780293.jpeg',
+  //   link: 'https://www.meetup.com/GatsbyJS-Meetup/',
+  //   type: 'community',
+  // },
   {
     name: 'LiveSport',
     img: getImgPath('livesport.svg'),
