@@ -78,6 +78,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Snyk',
+    img: getImgPath('snyk.svg'),
+    link: 'https://snyk.io/',
+    type: 'partner',
+  },
+  {
     name: 'Sticker Mule',
     img: getImgPath('sticker-mule.svg'),
     link: 'http://stickermule.com/supports/ngbigparty20-sponsorship',
