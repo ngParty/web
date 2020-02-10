@@ -42,8 +42,10 @@ const DATA: SpeakerModel[] = [
       linkedin: 'https://www.linkedin.com/in/jawache/',
     },
     talk: {
-      title: '12 Factor Green App',
-      abstract: `What is a mortgage? It’s a bet on your future. Being Green is a bet on the future of your children and grandchildren. It’s a bet that you can leave a better world for them that the one you inherited. It’s a bet we can make right now with the technology we already have, and it’s a bet that we can win. In this talk, I’ll explain how to build a Green application, front to back. You’ll walk away understanding why it’s crucial, how building Green apps will give you a competitive advantage and a step by step set of instructions for how to build one.`,
+      title: 'Make green not grey',
+      abstract: `<p>Grey apps are unfit and lazy, ripe for disruption. Green apps are leaner, faster, cheaper, more battery efficient and smarter. </p>
+      <p>With increased regulation Green apps also have a competitive advantage, you can use Green apps everywhere, unlike their Grey counterparts. In this talk, I'll give you a clear, concise, bullet-pointed list for how to build a Green app. I'll demonstrate how this results in a leaner application that runs faster and is cheaper to build.</p>
+      <p>You'll walk away tooled up and ready to build a lean Green money-making machine.</p>`,
       media: {
         slides: '',
         video: '',
@@ -223,7 +225,7 @@ const DATA: SpeakerModel[] = [
       linkedin: 'https://www.linkedin.com/in/lihautan/',
     },
     talk: {
-      title: '',
+      title: 'Compiling Svelte',
       abstract: ``,
       media: {
         slides: '',
