@@ -9,6 +9,10 @@ const makeTextSquare = (top: number, unit = 'rem') => {
   `
 }
 
+const size = {
+  lightboxSpace: 4,
+}
+
 export const lightboxStyles = css.global`
   .lightbox {
     background: rgba(0, 0, 0, 0.8);
@@ -21,9 +25,11 @@ export const lightboxStyles = css.global`
   }
   .lightbox-content {
     background: #fff;
-    padding: 4vw;
-    margin: 0 4vw;
+    padding: ${size.lightboxSpace}vw;
+    margin: 0 ${size.lightboxSpace}vw;
     max-width: ${theme.sizes.maxWidthContent};
+    overflow: auto;
+    max-height: ${100 - size.lightboxSpace}vh;
   }
   .lightbox-headline {
     line-height: 1.6rem;
