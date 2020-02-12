@@ -82,7 +82,7 @@ export const Tickets = () => {
           </ul>
         </section>
         <section className="ticket-info-bulk">
-          <h2>Bulk Tickets for Companies</h2>
+          <h2>Invoice/Bulk Tickets for Companies</h2>
           <p className="text-content">
             Best community event happens when like-minded people get together
             🥳. So if you want to purchase ngBigParty tickets for an entire
