@@ -48,7 +48,7 @@ export const Intro = () => {
             dangerouslySetInnerHTML={{ __html: DATA.about }}
           />
           <AboutInNumbers data={DATA.aboutInNumbers} />
-          <Tickets id="tickets" enable={data.config.enableTickets} />
+          <Tickets enable={data.config.enableTickets} />
         </section>
 
         <section className="gallery">
@@ -88,11 +88,11 @@ const pluralize = (word: string, count: number) => {
   return count > 1 ? `${word}s` : word
 }
 
-const Tickets = (props: { id: string; enable: boolean }) => {
-  const { enable, id } = props
+const Tickets = (props: { enable: boolean }) => {
+  const { enable } = props
 
   return (
-    <div id={id} className="about-action">
+    <div className="about-action">
       <style jsx>{ticketsStyles}</style>
       {enable ? (
         <a
