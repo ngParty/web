@@ -22,3 +22,6 @@ export type Nullable<T> = T extends null | undefined ? T : never
 export function isBlank<T>(value: T): value is Nullable<T> {
   return value == null
 }
+export function isString(value: unknown): value is string {
+  return typeof value === 'string'
+}
