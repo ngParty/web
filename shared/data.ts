@@ -11,7 +11,7 @@ const links = {
       link: 'https://github.com/ngParty/web/blob/master/COC.md',
     },
     {
-      label: 'Brand Materials',
+      label: 'Press Kit',
       link: 'http://bit.ly/ngParty-brand-materials',
     },
   ],
