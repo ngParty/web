@@ -42,7 +42,9 @@ function isOrganizer(
 function isSpeaker(
   value: Partial<SpeakerModel & OrganizerModel>
 ): value is SpeakerModel {
-  return Boolean(value.about && value.talk && value.jobTitle && value.company)
+  return Boolean(
+    value.about && value.talk && value.jobTitle && utils.isString(value.company)
+  )
 }
 
 export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
@@ -54,7 +56,10 @@ export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
           <>
             {props.jobTitle}
             <br />
-            <span className="card-company">at {props.company}</span>
+            <PersonCompanyLabel
+              className="card-company"
+              company={props.company}
+            />
           </>
         ),
         children: null,
@@ -151,7 +156,7 @@ const PersonLightbox = (props: PersonLightBoxProps) => {
         <div className="lightbox-content">
           <h2 className="lightbox-headline">{fullName}</h2>
           <h3 className="lightbox-subtitle">
-            {jobTitle} <span>at {company}</span>
+            {jobTitle} <PersonCompanyLabel company={company} />
           </h3>
           <p className="lightbox-social">
             <SocialLinkList data={social} showLabel />
@@ -197,6 +202,15 @@ const SocialLinkList = (props: {
   })
 
   return <>{view}</>
+}
+
+const PersonCompanyLabel = (props: {
+  company: string | ''
+  className?: string
+}) => {
+  return props.company ? (
+    <span className={props.className}>at {props.company}</span>
+  ) : null
 }
 
 const formatRole = (role: OrganizerModel['role']) => {

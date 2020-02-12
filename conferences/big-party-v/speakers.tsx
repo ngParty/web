@@ -108,8 +108,8 @@ const DATA: SpeakerModel[] = [
     id: 'sebastian-witalec',
     name: 'Sebastian Witalec',
     img: '/big-party-v/img/speakers/sebastian-w.jpg',
-    company: 'Progress',
-    jobTitle: 'Senior Developer Advocate',
+    company: '',
+    jobTitle: 'Senior Developer Advocate & GDE',
     country: 'UK, London',
     about: `Sebastian Witalec is a Google Developer Expert for Angular. He loves working on both serious and fun projects and one day he will use his robot army to conquer the world.`,
     social: {
