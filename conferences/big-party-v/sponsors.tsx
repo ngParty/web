@@ -12,6 +12,12 @@ const getImgPath = (img: string) => `/big-party-v/img/partners/${img}`
 
 const data: SponsorModel[] = [
   {
+    name: 'LiveSport',
+    img: getImgPath('livesport.svg'),
+    link: 'https://www.livesport.eu/',
+    type: 'platinum',
+  },
+  {
     name: 'productboard',
     img: getImgPath('productboard.svg'),
     link: 'https://www.productboard.com',
@@ -46,6 +52,12 @@ const data: SponsorModel[] = [
     img: getImgPath('ataccama.svg'),
     link: 'https://www.ataccama.com/',
     type: 'silver',
+  },
+  {
+    name: 'punto verde',
+    img: getImgPath('punto-verde.png'),
+    link: 'https://www.puntoverde.cz/',
+    type: 'bronze',
   },
   {
     name: 'Edupunk',
@@ -156,12 +168,6 @@ const data: SponsorModel[] = [
   //   link: 'https://www.meetup.com/GatsbyJS-Meetup/',
   //   type: 'community',
   // },
-  {
-    name: 'LiveSport',
-    img: getImgPath('livesport.svg'),
-    link: 'https://www.livesport.eu/',
-    type: 'platinum',
-  },
 ]
 
 const sponsorByType = {
