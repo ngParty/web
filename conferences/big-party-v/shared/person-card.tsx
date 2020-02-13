@@ -151,7 +151,7 @@ const PersonLightbox = (props: PersonLightBoxProps) => {
   const hasTalkReady = Boolean(talk.title)
 
   return (
-    <amp-lightbox id={id} layout="nodisplay">
+    <amp-lightbox id={id} layout="nodisplay" scrollable>
       <div className="lightbox" role="button" on={handleTapClose} tabIndex={0}>
         <div className="lightbox-content">
           <h2 className="lightbox-headline">{fullName}</h2>

@@ -5,6 +5,7 @@ declare namespace AMP {
     id: string
     layout: 'nodisplay'
     children?: React.ReactNode
+    scrollable?: boolean
   }
   interface AmpSidebar extends AmpBaseElement {
     id: string
