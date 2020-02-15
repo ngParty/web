@@ -49,7 +49,8 @@ export const stylesUtils = css.global`
     color: ${theme.colors.textDark};
   }
 
-  .link {
+  .link,
+  .link:visited {
     transition: border-color ease-out 250ms;
     color: ${theme.colors.accent};
     text-decoration: none;

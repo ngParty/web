@@ -2,7 +2,8 @@ import css from 'styled-jsx/css'
 import { theme } from './theme'
 
 export const styles = css.global`
-  .btn {
+  .btn,
+  .btn:visited {
     display: inline-block;
     color: ${theme.colors.white};
     padding: 1rem 2rem;
@@ -28,13 +29,15 @@ export const styles = css.global`
   .btn--secondary:active {
     color: ${theme.colors.textDark};
   }
-  .btn--secondary {
+  .btn--secondary,
+  .btn--secondary:visited {
     color: ${theme.colors.textDark};
     background: ${theme.colors.white};
     border: 1px solid ${theme.colors.bgDark};
   }
 
-  .btn--accent {
+  .btn--accent,
+  .btn--accent:visited {
     color: ${theme.colors.white};
     background: ${theme.colors.accent};
   }
