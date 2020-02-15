@@ -62,7 +62,14 @@ export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
             />
           </>
         ),
-        children: null,
+        children: (
+          <h3 className="card-talk-title">
+            <small className="card-talk-title__icon" title="Talk title">
+              🎤{' '}
+            </small>
+            <span>{props.talk.title}</span>
+          </h3>
+        ),
         hoverStyle: 'translate' as const,
         onTap: `tap:${props.id}`,
         detail: { ...props, social: normalizedSocial },
@@ -130,7 +137,7 @@ const PersonCardInfo = (props: PersonCardInfoProps) => {
       <div className="card-info">
         <h2 className="card-heading">{fullName}</h2>
         <p className="card-title">{title}</p>
-        {children ? <p className="card-extra-content">{children}</p> : null}
+        {children ? <div className="card-extra-content">{children}</div> : null}
       </div>
     </section>
   )

@@ -124,12 +124,14 @@ export const styles = css.global`
 
     padding-top: 10%;
     padding-bottom: 10%;
+    font-size: 1.5rem;
   }
 
   @media (min-width: ${theme.breakpoints.medium}) {
-   .card-info{
+   .card-info {
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 1rem;
     /* ${makeTextSquare(5)} */
    }
   }
@@ -151,6 +153,27 @@ export const styles = css.global`
   }
   .card-company {
     color: ${theme.colors.lightGrey};
+  }
+  .card-talk-title {
+    color: ${theme.colors.lightGrey};
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    border-top: 1px solid ${theme.colors.textLight};
+    display: flex;
+    align-items: center;
+  }
+  .card-talk-title__icon {
+    margin-right: 1em;
+  }
+  @media (min-width: ${theme.breakpoints.medium}) {
+    .card-talk-title {
+      display: none;
+    }
+  }
+  @media (min-width: ${theme.breakpoints.large}) {
+    .card-talk-title {
+      display: flex;
+    }
   }
 
 
