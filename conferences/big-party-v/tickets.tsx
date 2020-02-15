@@ -7,7 +7,10 @@ interface TicketModel {
   price: number
   currency: string
   vatPercentage?: number
-  link: string
+  link: {
+    individual: string
+    invoice: string
+  }
   description: string
   /**
    * active until
@@ -20,7 +23,10 @@ const currDate = new Date()
 const DATA: TicketModel[] = [
   {
     type: 'Early bird',
-    link: links.tickets,
+    link: {
+      individual: links.tickets,
+      invoice: links.ticketsInvoice,
+    },
     currency: 'CZK',
     price: 2350,
     vatPercentage: 0,
@@ -31,7 +37,10 @@ const DATA: TicketModel[] = [
   },
   {
     type: 'Regular',
-    link: links.tickets,
+    link: {
+      individual: links.tickets,
+      invoice: links.ticketsInvoice,
+    },
     currency: 'CZK',
     price: 3450,
     vatPercentage: 0,
@@ -41,7 +50,10 @@ const DATA: TicketModel[] = [
   },
   {
     type: 'Late bird',
-    link: links.tickets,
+    link: {
+      individual: links.tickets,
+      invoice: links.ticketsInvoice,
+    },
     currency: 'CZK',
     price: 4550,
     vatPercentage: 0,
@@ -86,7 +98,16 @@ export const Tickets = () => {
           <p className="text-content">
             Best community event happens when like-minded people get together
             🥳. So if you want to purchase ngBigParty tickets for an entire
-            crew, please contact us directly by{' '}
+            crew, please use following{' '}
+            <a
+              href={links.ticketsInvoice}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              order ticket by invoice form
+            </a>{' '}
+            or contact us directly by{' '}
             <a
               className="link"
               href={`${data.links.contact.email.link}?subject=Bulk tickets request`}
@@ -123,43 +144,52 @@ const Ticket = (
   const isDisabled = soldOut || currDate > dateBoundary
 
   const cx = {
-    root: isDisabled ? 'disabled' : '',
+    containerDisabled: isDisabled ? 'disabled' : '',
   }
 
   return (
-    <div className={`ticket ${cx.root}`} tabIndex={0}>
+    <div className={`ticket ${cx.containerDisabled}`} tabIndex={0}>
       <div className="ticket-type">
-        <h3 className="ticket-title">{type}</h3>
-        <span className="ticket-date">until {formatDate(date)}</span>
+        <h3 className="ticket-type__title">{type}</h3>
+        <span className="ticket-type__date">until {formatDate(date)}</span>
       </div>
       <div className="ticket-description">
         <p>{children}</p>
       </div>
-      {!isDisabled ? (
-        <div className="ticket-action">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 mt-6"
-          >
-            <span className="ticket-price">{normalizedAmount}</span>
-            <span className="ticket-vat">{normalizedVAT}</span>
-          </a>
-        </div>
-      ) : (
-        <div className="ticket-action disabled">
-          {soldOut ? (
-            <>
-              sold
-              <br />
-              out
-            </>
-          ) : (
-            <>ended</>
-          )}
-        </div>
-      )}
+      <div className="ticket-price">
+        <span className="ticket-price__amount">{normalizedAmount}</span>
+        <span className="ticket-price__fees">{normalizedVAT}</span>
+      </div>
+      <div className={`ticket-actions-container ${cx.containerDisabled}`}>
+        {!isDisabled ? (
+          <>
+            <a
+              href={link.individual}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ticket-action ticket-action--primary block p-4 mt-6"
+            >
+              Buy now
+            </a>
+            <a
+              href={link.invoice}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ticket-action ticket-action--secondary"
+            >
+              order by invoice <span aria-label="invoice-icon">🧾</span>
+            </a>
+          </>
+        ) : soldOut ? (
+          <>
+            sold
+            <br />
+            out
+          </>
+        ) : (
+          <>ended</>
+        )}
+      </div>
     </div>
   )
 }

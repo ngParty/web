@@ -38,6 +38,7 @@ export const navigation: NavItemModel[] = [
 ]
 const links = {
   tickets: 'http://bit.ly/ng-bigparty-v-tickets',
+  ticketsInvoice: 'http://bit.ly/ng-bigparty-v-invoice-tickets',
 }
 
 const config = {
