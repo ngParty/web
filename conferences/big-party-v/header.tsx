@@ -1,7 +1,7 @@
 import { styles, sidebarStyles } from './header.styles'
 import { NgPartyIcon } from '../../components'
 
-import { navigation as DATA, NavItemModel, links } from './data'
+import { navigation as DATA, LinkModel } from './data'
 import { ReactElement } from 'react'
 
 export const Header = () => {
@@ -27,21 +27,21 @@ export const Header = () => {
           </div>
         </a>
 
-        <MainNav data={DATA} />
+        <MainNav data={DATA.main} />
 
         <div className="headerbar-action center m0 p0 flex justify-center nowrap">
-          <BuyTicketsAction link={links.tickets} />
+          <BuyTicketsAction {...DATA.secondary[0]} />
         </div>
       </header>
 
       <Sidebar id={sidebarId}>
-        <SibebarNav data={DATA} />
+        <SibebarNav data={DATA.main} />
       </Sidebar>
     </>
   )
 }
 
-const MainNav = (props: { data: NavItemModel[] }) => {
+const MainNav = (props: { data: LinkModel[] }) => {
   const { data } = props
   return (
     <nav className="headerbar-nav nav">
@@ -99,7 +99,7 @@ const Sidebar = (props: { id: string; children: ReactElement }) => {
   )
 }
 
-const SibebarNav = (props: { data: NavItemModel[] }) => {
+const SibebarNav = (props: { data: LinkModel[] }) => {
   const { data } = props
   return (
     <nav className="sidebar-nav nav">
@@ -121,20 +121,16 @@ const SibebarNav = (props: { data: NavItemModel[] }) => {
   )
 }
 
-const buyTicketsActionDefaultProps = {
-  link: '#',
-}
-const BuyTicketsAction = (
-  props: Partial<typeof buyTicketsActionDefaultProps>
-) => {
-  const { link } = props
+const BuyTicketsAction = (props: LinkModel) => {
+  const { link, label } = props
+
   return (
     <a
       target="_blank"
       href={link}
       className="text-decoration-none headerbar-action-link"
     >
-      Tickets
+      {label}
     </a>
   )
 }

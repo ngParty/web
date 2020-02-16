@@ -55,7 +55,7 @@ export const Footer = () => {
       </style>
       <nav>
         <div className="internal-links">
-          <FooterNavigationItem data={navigation} />
+          <FooterNavigationItem data={navigation.main} />
           <FooterNavigationItem data={dataMore} />
           <FooterNavigationItem data={dataConferences} />
         </div>

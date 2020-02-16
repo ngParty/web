@@ -48,7 +48,10 @@ export const Intro = () => {
             dangerouslySetInnerHTML={{ __html: DATA.about }}
           />
           <AboutInNumbers data={DATA.aboutInNumbers} />
-          <Tickets enable={data.config.enableTickets} />
+          <Tickets
+            enable={data.config.enableTickets}
+            link={data.navigation.secondary[0].link}
+          />
         </section>
 
         <section className="gallery">
@@ -88,18 +91,14 @@ const pluralize = (word: string, count: number) => {
   return count > 1 ? `${word}s` : word
 }
 
-const Tickets = (props: { enable: boolean }) => {
-  const { enable } = props
+const Tickets = (props: { enable: boolean; link: string }) => {
+  const { enable, link } = props
 
   return (
     <div className="about-action">
       <style jsx>{ticketsStyles}</style>
       {enable ? (
-        <a
-          className="btn btn--accent"
-          href={data.links.tickets}
-          target="_blank"
-        >
+        <a className="btn btn--accent" href={link} target="_blank">
           Get Tickets
         </a>
       ) : (
