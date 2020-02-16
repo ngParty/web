@@ -1,6 +1,7 @@
 import { styles } from './tickets.styles'
 import { data } from '../../shared'
 import { links } from './data'
+import { A } from './shared'
 
 interface TicketModel {
   type: string
@@ -99,21 +100,21 @@ export const Tickets = () => {
             Best community event happens when like-minded people get together
             🥳. So if you want to purchase ngBigParty tickets for an entire
             crew, please use following{' '}
-            <a
+            <A
               href={links.ticketsInvoice}
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               order ticket by invoice form
-            </a>{' '}
+            </A>{' '}
             or contact us directly by{' '}
-            <a
+            <A
               className="link"
               href={`${data.links.contact.email.link}?subject=Bulk tickets request`}
             >
               sending an e-mail
-            </a>{' '}
+            </A>{' '}
             with the details.
           </p>
           <p className="text-content">We’ll be prompt to answer!</p>
@@ -163,22 +164,18 @@ const Ticket = (
       <div className={`ticket-actions-container ${cx.containerDisabled}`}>
         {!isDisabled ? (
           <>
-            <a
+            <A
               href={link.individual}
-              target="_blank"
-              rel="noopener noreferrer"
               className="ticket-action ticket-action--primary block p-4 mt-6"
             >
               Buy now
-            </a>
-            <a
+            </A>
+            <A
               href={link.invoice}
-              target="_blank"
-              rel="noopener noreferrer"
               className="ticket-action ticket-action--secondary"
             >
               order by invoice <span aria-label="invoice-icon">🧾</span>
-            </a>
+            </A>
           </>
         ) : soldOut ? (
           <>

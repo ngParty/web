@@ -1,8 +1,10 @@
-import { styles, sidebarStyles } from './header.styles'
+import { ReactElement } from 'react'
+
 import { NgPartyIcon } from '../../components'
 
+import { styles, sidebarStyles } from './header.styles'
 import { navigation as DATA, LinkModel } from './data'
-import { ReactElement } from 'react'
+import { A } from './shared'
 
 export const Header = () => {
   const sidebarId = 'header-sidebar'
@@ -125,12 +127,8 @@ const BuyTicketsAction = (props: LinkModel) => {
   const { link, label } = props
 
   return (
-    <a
-      target="_blank"
-      href={link}
-      className="text-decoration-none headerbar-action-link"
-    >
+    <A href={link} className="text-decoration-none headerbar-action-link">
       {label}
-    </a>
+    </A>
   )
 }

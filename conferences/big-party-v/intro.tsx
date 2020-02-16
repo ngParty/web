@@ -1,7 +1,7 @@
 import * as data from './data'
-
 import { styles, aboutNumbersStyles, ticketsStyles } from './intro.styles'
 import { Gallery } from './gallery'
+import { A } from './shared'
 
 const DATA = {
   title: 'ngBigParty V',
@@ -98,9 +98,9 @@ const Tickets = (props: { enable: boolean; link: string }) => {
     <div className="about-action">
       <style jsx>{ticketsStyles}</style>
       {enable ? (
-        <a className="btn btn--accent" href={link} target="_blank">
+        <A className="btn btn--accent" href={link}>
           Get Tickets
-        </a>
+        </A>
       ) : (
         <button className="btn btn--accent" disabled>
           Tickets available soon...
