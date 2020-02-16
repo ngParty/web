@@ -107,9 +107,9 @@ export const styles = css.global`
   .ticket-action {
     display: block;
     padding: 1em;
-    transition: color ease-out 250ms;
     text-decoration: inherit;
     line-height: 1.4;
+    transition: color ease-out 250ms, background ease-out 250ms;
   }
   .ticket-action--primary {
     color: ${theme.colors.white};

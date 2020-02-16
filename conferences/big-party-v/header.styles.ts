@@ -87,14 +87,25 @@ export const styles = css.global`
   }
 
   .headerbar-action {
-    background: #3fea90;
-    padding: 0.5rem 1rem;
-    color: white;
   }
-  @media (min-width: ${theme.breakpoints.medium}) {
-    .headerbar-action {
-      margin-left: 1rem;
-    }
+
+  .headerbar-action-link {
+    color: ${theme.colors.white};
+    background: ${theme.colors.accent};
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color ease-out 250ms, background ease-out 250ms,
+      box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .headerbar-action-link:visited {
+    color: ${theme.colors.white};
+  }
+  .headerbar-action-link:hover,
+  .headerbar-action-link:focus {
+    color: ${theme.colors.accent};
+    background: ${theme.colors.white};
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.25),
+      inset 0 0 0px 1px ${theme.colors.accent};
   }
 `
 
