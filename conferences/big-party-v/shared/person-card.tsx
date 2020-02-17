@@ -49,6 +49,9 @@ function isSpeaker(
 
 export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
   const normalizedSocial = formatSocialHandles(props.social)
+  const modalId = `${props.id}-detail`
+  const openModalHandler = `tap:${modalId}`
+  const closeModalHandler = `${openModalHandler}.close`
 
   const modelNarrowedProps = isSpeaker(props)
     ? {
@@ -71,8 +74,13 @@ export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
           </h3>
         ),
         hoverStyle: 'translate' as const,
-        onTap: `tap:${props.id}`,
-        detail: { ...props, social: normalizedSocial },
+        onTap: () => openModalHandler,
+        detail: {
+          ...props,
+          social: normalizedSocial,
+          id: modalId,
+          onClose: () => closeModalHandler,
+        },
       }
     : {
         title: formatRole(props.role),
@@ -84,6 +92,7 @@ export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
 
   const { detail: detailProps, ...normalizedProps } = modelNarrowedProps
   const infoProps: PersonCardInfoProps = {
+    id: props.id,
     name: props.name,
     img: props.img,
     ...normalizedProps,
@@ -104,15 +113,16 @@ export const PersonCard = (props: SpeakerModel | OrganizerModel) => {
 }
 
 type PersonCardInfoProps = {
+  id: string
   img: string
   name: string
   title: string | ReactElement
-  onTap?: string
+  onTap?: () => string
   children?: JSX.Element | JSX.Element[] | null
   hoverStyle: 'scale' | 'translate'
 }
 const PersonCardInfo = (props: PersonCardInfoProps) => {
-  const { img, name: fullName, title, onTap, children, hoverStyle } = props
+  const { img, name: fullName, title, onTap, children, hoverStyle, id } = props
   const isTapable = Boolean(onTap)
 
   const cx = {
@@ -121,9 +131,10 @@ const PersonCardInfo = (props: PersonCardInfoProps) => {
 
   return (
     <section
+      id={id}
       style={{ cursor: isTapable ? 'pointer' : 'auto' }}
       className={`card ${cx.root}`}
-      on={onTap}
+      on={onTap ? onTap() : ''}
       tabIndex={0}
       role="button"
     >
@@ -151,15 +162,24 @@ type PersonLightBoxProps = {
   about: string
   social: NormalizedSocialLinkMap
   talk: SpeakerTalkModel
+  onClose: () => string
 }
 const PersonLightbox = (props: PersonLightBoxProps) => {
-  const { id, name: fullName, jobTitle, company, about, social, talk } = props
-  const handleTapClose = `tap:${id}.close`
+  const {
+    id,
+    name: fullName,
+    jobTitle,
+    company,
+    about,
+    social,
+    talk,
+    onClose,
+  } = props
   const hasTalkReady = Boolean(talk.title)
 
   return (
     <amp-lightbox id={id} layout="nodisplay" scrollable>
-      <div className="lightbox" role="button" on={handleTapClose} tabIndex={0}>
+      <div className="lightbox" role="button" on={onClose()} tabIndex={0}>
         <div className="lightbox-content">
           <h2 className="lightbox-headline">{fullName}</h2>
           <h3 className="lightbox-subtitle">
