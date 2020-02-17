@@ -18,42 +18,27 @@ const DATA: ScheduleItemModel[] = [
           fullName: 'Martin Hochel',
           company: 'ngParty',
           img: '',
-          link: '#martinhochel',
+          link: '#martin-hochel',
         },
         {
           fullName: 'Viliam Elischer',
           company: 'ngParty',
           img: '',
-          link: '#viliamelischer',
+          link: '#viliam-elischer',
         },
         {
           fullName: 'Mario Vejlupek',
           company: 'ngParty',
           img: '',
-          link: '#mariovejlupek',
+          link: '#mario-vejlupek',
         },
       ],
       talk: 'Welcome to ngBigParty V!',
     },
   },
   {
-    title: 'Talk 1',
+    title: 'Talks',
     time: '0915',
-    speaker: {
-      bio: [
-        {
-          fullName: '',
-          company: '',
-          img: '',
-          link: '#',
-        },
-      ],
-      talk: '',
-    },
-  },
-  {
-    title: 'Talk 2',
-    time: '0940',
     speaker: {
       bio: [
         {
@@ -71,23 +56,8 @@ const DATA: ScheduleItemModel[] = [
     time: '1000',
   },
   {
-    title: 'Talk 3',
+    title: 'Talks',
     time: '1030',
-    speaker: {
-      bio: [
-        {
-          fullName: '',
-          company: '',
-          img: '',
-          link: '#',
-        },
-      ],
-      talk: '',
-    },
-  },
-  {
-    title: 'Talk 4',
-    time: '1055',
     speaker: {
       bio: [
         {
@@ -105,27 +75,12 @@ const DATA: ScheduleItemModel[] = [
     time: '1130',
   },
   {
-    title: 'Lightning/Ingnite Talks',
+    title: 'Lightning/Ignite Talks',
     time: '1300',
   },
   {
-    title: 'Talk 5',
+    title: 'Talks',
     time: '1330',
-    speaker: {
-      bio: [
-        {
-          fullName: '',
-          company: '',
-          img: '',
-          link: '#',
-        },
-      ],
-      talk: '',
-    },
-  },
-  {
-    title: 'Talk 6',
-    time: '1355',
     speaker: {
       bio: [
         {
@@ -143,23 +98,8 @@ const DATA: ScheduleItemModel[] = [
     time: '1420',
   },
   {
-    title: 'Talk 7',
+    title: 'Talks',
     time: '1450',
-    speaker: {
-      bio: [
-        {
-          fullName: '',
-          company: '',
-          img: '',
-          link: '#',
-        },
-      ],
-      talk: '',
-    },
-  },
-  {
-    title: 'Talk 8',
-    time: '1515',
     speaker: {
       bio: [
         {
@@ -177,23 +117,8 @@ const DATA: ScheduleItemModel[] = [
     time: '1540',
   },
   {
-    title: 'Talk 9',
+    title: 'Talks',
     time: '1610',
-    speaker: {
-      bio: [
-        {
-          fullName: '',
-          company: '',
-          img: '',
-          link: '#',
-        },
-      ],
-      talk: '',
-    },
-  },
-  {
-    title: 'Talk 10',
-    time: '1635',
     speaker: {
       bio: [
         {
@@ -212,7 +137,7 @@ const DATA: ScheduleItemModel[] = [
     speaker: {
       bio: [
         {
-          fullName: 'ngParty',
+          fullName: '',
           company: '',
           img: '',
           link: '#',

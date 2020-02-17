@@ -123,6 +123,25 @@ export const styles = css.global`
     line-height: 1.6rem;
     font-weight: 400;
     color: ${theme.colors.accent};
+    transition: transform 0.25s ease-out, padding 0.25s ease-out;
+  }
+  .agenda-item-description-speaker:visited {
+    color: ${theme.colors.accent};
+  }
+  .agenda-item-description-speaker::before {
+    content: '>';
+    visibility: hidden;
+    position: absolute;
+    transform: translate(1em, 0);
+  }
+  .agenda-item-description-speaker:hover,
+  .agenda-item-description-speaker:focus {
+    padding-left: 1em;
+  }
+  .agenda-item-description-speaker:hover::before,
+  .agenda-item-description-speaker:focus::before {
+    visibility: visible;
+    transform: translate(-0.75em, 0);
   }
 
   .agenda-item-description-text {
