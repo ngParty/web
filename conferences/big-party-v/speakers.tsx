@@ -89,7 +89,7 @@ const DATA: SpeakerModel[] = [
     country: 'DE, Munich',
     about: `In the role of Developer Advocate at JetBrains, Sebastian spends a large chunk of his day thinking about how technologies can empower and delight people. He loves building networked applications and using Kotlin on a multitude of platforms (including the browser), as well as hacking up strange ideas late at night. He focuses on topics around Kotlin/JS and Education at JetBrains.`,
     social: {
-      twitter: 'https://twitter.com/truesebi',
+      twitter: 'https://twitter.com/sebi_io',
       github: '',
       linkedin: 'https://www.linkedin.com/in/sebastian-aigner/',
     },
