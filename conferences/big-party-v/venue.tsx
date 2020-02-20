@@ -2,10 +2,10 @@ import { styles } from './venue.styles'
 
 const DATA = {
   map:
-    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10244.036746471234!2d14.4029035!3d50.0673896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55cc039b5fb421f0!2sRadlick%C3%A1%20Kulturn%C3%AD%20Sportovna!5e0!3m2!1sen!2scz!4v1576489381966!5m2!1sen!2scz',
-  name: 'Radlická Kulturní Sportovna, Prague',
-  address: 'Za Ženskými domovy 125/5, <br />150 00 Praha 5-Smíchov',
-  link: 'https://kulturnisportovna.cz',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.1633323616443!2d14.447139915587272!3d50.10194972029567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94b1a6b253bd%3A0xb18c9912314fcb65!2sVNITROBLOCK!5e0!3m2!1sen!2scz!4v1582237337459!5m2!1sen!2scz',
+  name: 'Vnitroblock - event hall, Prague',
+  address: 'Tusarova 791/31<br />Praha 7 – Holešovice, Praha 7',
+  link: 'https://vnitroblock.cz/',
 }
 
 export const Venue = () => {
