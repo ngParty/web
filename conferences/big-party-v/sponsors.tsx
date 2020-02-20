@@ -161,6 +161,12 @@ const data: SponsorModel[] = [
     link: 'https://vuejs.cz/',
     type: 'community',
   },
+  {
+    name: 'Startup weekend Prague',
+    img: getImgPath('startup-weekend-prague.png'),
+    link: 'https://startovani.cz',
+    type: 'community',
+  },
   // {
   //   name: 'GatsbyJS Prague',
   //   img:
