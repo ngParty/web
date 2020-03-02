@@ -54,6 +54,18 @@ const data: SponsorModel[] = [
     type: 'silver',
   },
   {
+    name: 'Microsoft',
+    img: getImgPath('microsoft.svg'),
+    link: 'https://www.microsoft.com',
+    type: 'silver',
+  },
+  {
+    name: 'CDN77',
+    img: getImgPath('cdn-77.svg'),
+    link: 'https://www.cdn77.com/',
+    type: 'silver',
+  },
+  {
     name: 'punto verde',
     img: getImgPath('punto-verde.png'),
     link: 'https://www.puntoverde.cz/',
@@ -76,12 +88,6 @@ const data: SponsorModel[] = [
     img: getImgPath('reason-association.jpg'),
     link: 'https://reason-association.org',
     type: 'partner',
-  },
-  {
-    name: 'Microsoft',
-    img: getImgPath('microsoft.svg'),
-    link: 'https://www.microsoft.com',
-    type: 'silver',
   },
   {
     name: 'e-spres-oh',
@@ -162,9 +168,21 @@ const data: SponsorModel[] = [
     type: 'community',
   },
   {
+    name: 'GUG CZ',
+    img: getImgPath('gug-cz.svg'),
+    link: 'https://gug.cz',
+    type: 'community',
+  },
+  {
     name: 'Vue.js Prague',
     img: getImgPath('vue-prague.svg'),
     link: 'https://vuejs.cz/',
+    type: 'community',
+  },
+  {
+    name: 'ReasonML Prague',
+    img: getImgPath('reason-prague.png'),
+    link: 'https://www.meetup.com/ReasonML-Prague/',
     type: 'community',
   },
   {
