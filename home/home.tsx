@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { NgPartyIcon, TwitterIcon, GithubIcon } from '../components'
+import { NgPartyNewIcon, TwitterIcon, GithubIcon } from '../components'
 import normalizeCss from '../components/normalize.css'
 
 import { globalStyles } from './theme.styles'
@@ -59,7 +59,7 @@ const Logo = () => {
   return (
     <section className="logo-container">
       <h1 className="logo">
-        <NgPartyIcon />
+        <NgPartyNewIcon />
       </h1>
       <h2 className="brand-title">
         ngParty <small>Next Generation Development</small>
@@ -79,7 +79,7 @@ const About = () => {
       <p>
         Let’s meet, learn and share! <br />
         <code aria-label="ngParty tags">
-          #JavaScript, #ForCommunityByCommunity, #devsUnited
+          #JavaScript, #devsUnited, #forDevelopersByDevelopers
         </code>
       </p>
     </section>
@@ -93,7 +93,13 @@ const MainNav = () => {
         {data.navigation.map((item) => {
           return (
             <li key={item.label}>
-              <a href={item.link}>{item.label}</a>
+              <a
+                className={item.upcoming ? 'upcoming' : ''}
+                title={item.title}
+                href={item.link}
+              >
+                {item.label}
+              </a>
             </li>
           )
         })}
@@ -112,7 +118,7 @@ const Footer = () => {
       <div className="footer-wrapper">
         <div className="footer-wrapper-left">
           <div className="logotype">
-            <NgPartyIcon height={40} />
+            <NgPartyNewIcon height={40} />
           </div>
         </div>
         <div className="footer-wrapper-right">

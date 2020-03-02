@@ -142,6 +142,12 @@ export const styles = css.global`
     transform: translateX(0ch);
   }
 
+  .nav a.upcoming {
+    color: var(--ng-accent);
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+
   .about {
     font-size: 1.5rem;
     line-height: 1.75em;

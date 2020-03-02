@@ -2,6 +2,12 @@ import { data as sharedData } from '../shared'
 export const data = {
   navigation: [
     {
+      title: '',
+      upcoming: true,
+      label: 'ngBigParty V',
+      link: '/big-party-v',
+    },
+    {
       label: 'Meetups',
       link: '//meetup.com/ngparty',
     },

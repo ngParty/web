@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import { NgPartyIcon } from '../../components'
+import { NgPartyNewIcon } from '../../components'
 
 import { styles, sidebarStyles } from './header.styles'
 import { navigation as DATA, LinkModel } from './data'
@@ -24,7 +24,7 @@ export const Header = () => {
           className="text-decoration-none inline-block mx-auto headerbar-home-link  "
         >
           <div className="headerbar-title mx-auto">
-            <NgPartyIcon className="headerbar-title-logo" />
+            <NgPartyNewIcon className="headerbar-title-logo" />
             <span>BigParty V</span>
           </div>
         </a>

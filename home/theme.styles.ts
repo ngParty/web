@@ -3,7 +3,9 @@ import css from 'styled-jsx/css'
 const colors = {
   foreground: '#000',
   background: '#fff',
-  accent: '#79ffe1',
+  accent: '#75bbd7',
+  // accent: '#3fea90',
+  // accent: '#79ffe1',
 }
 
 const breakpoints = {

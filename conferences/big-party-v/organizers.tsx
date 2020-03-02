@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import { NgPartyIcon } from '../../components'
+import { NgPartyNewIcon } from '../../components'
 import { links } from '../../shared'
 
 import { LinkModel } from './data'
@@ -83,7 +83,7 @@ export const Organizers = () => {
       <section className="organizer-section">
         <h3 className="organizer-logo">
           <a href={links.home()}>
-            <NgPartyIcon />
+            <NgPartyNewIcon />
           </a>
         </h3>
         <div className="organizer-bio">
@@ -93,7 +93,7 @@ export const Organizers = () => {
             committed to encourage, inspire and share JavaScript knowledge among
             its members. <br />
             <code className="organizer-tags" aria-label="ngParty tags">
-              #JavaScript, #ForCommunityByCommunity, #devsUnited
+              #JavaScript, #devsUnited, #forDevelopersByDevelopers
             </code>
           </p>
           <div>
