@@ -81,7 +81,7 @@ const data: SponsorModel[] = [
     name: 'Microsoft',
     img: getImgPath('microsoft.svg'),
     link: 'https://www.microsoft.com',
-    type: 'partner',
+    type: 'silver',
   },
   {
     name: 'e-spres-oh',
@@ -153,6 +153,12 @@ const data: SponsorModel[] = [
     name: 'Czechitas',
     img: getImgPath('czechitas.svg'),
     link: 'https://www.czechitas.cz/',
+    type: 'community',
+  },
+  {
+    name: 'Frontendisti.cz',
+    img: getImgPath('frontendisti.png'),
+    link: 'https://frontendisti.cz',
     type: 'community',
   },
   {
