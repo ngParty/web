@@ -252,15 +252,27 @@ export const Sponsors = () => {
         </div>
       </div>
 
-      <SponsorList title="Partners" data={sponsorByType.partners} />
+      <SponsorList
+        id="supporters-partners"
+        title="Partners"
+        data={sponsorByType.partners}
+      />
 
-      <SponsorList title="Communities" data={sponsorByType.community} />
+      <SponsorList
+        id="supporters-communities"
+        title="Communities"
+        data={sponsorByType.community}
+      />
     </>
   )
 }
 
-const SponsorList = (props: { title: string; data: SponsorModel[] }) => {
-  const { data, title } = props
+const SponsorList = (props: {
+  id?: string
+  title: string
+  data: SponsorModel[]
+}) => {
+  const { id, data, title } = props
   const itemCount = data.length
   const isPlatinum = itemCount === 1 && data[0].type === 'platinum'
 
@@ -270,7 +282,7 @@ const SponsorList = (props: { title: string; data: SponsorModel[] }) => {
   }
 
   return itemCount ? (
-    <section>
+    <section id={id}>
       <h2 className="sponsor-title">{title}</h2>
       <ul className={css.root}>
         {data.map((item, idx) => {
