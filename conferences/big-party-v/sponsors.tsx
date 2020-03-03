@@ -120,6 +120,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Smitio',
+    img: getImgPath('smitio.svg'),
+    link: 'https://smitio.com',
+    type: 'partner',
+  },
+  {
     name: 'Goout',
     img: getImgPath('goout.svg'),
     link: 'https://goout.net/',
