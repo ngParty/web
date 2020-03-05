@@ -126,6 +126,12 @@ const data: SponsorModel[] = [
     type: 'partner',
   },
   {
+    name: 'Startup Jobs',
+    img: getImgPath('startupjobs.svg'),
+    link: 'https://www.startupjobs.cz/',
+    type: 'partner',
+  },
+  {
     name: 'Goout',
     img: getImgPath('goout.svg'),
     link: 'https://goout.net/',
