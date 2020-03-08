@@ -1,4 +1,40 @@
-export type WebpackConfig = <T extends object>(
+type NextDefaultPathMap<Q extends Record<string, unknown>> = Record<
+  string,
+  { page: string; query?: Q }
+>
+export interface NextConfig {
+  webpack: WebpackConfig
+  pageExtensions: string[]
+  env: Record<string, string>
+  assetPrefix: string
+  target: 'serverless' | 'server'
+  compress: boolean
+  devIndicators: {
+    autoPrerender: boolean
+  }
+  poweredByHeader: boolean
+  generateEtags: boolean
+  distDir: string
+  typescript: {
+    ignoreDevErrors: boolean
+    ignoreBuildErrors: boolean
+  }
+  exportPathMap: boolean
+  exportTrailingSlash: <Q>(
+    defaultPathMap: NextDefaultPathMap<Q>,
+    options: {
+      dev: boolean
+      dir: string
+      outDir: string | null
+      distDir: string
+      buildId: string
+    }
+  ) => Promise<NextDefaultPathMap>
+}
+
+export type WebpackConfig = <
+  T extends Required<import('webpack').Configuration>
+>(
   config: T,
   options: NextWebpackOptions
 ) => T & object

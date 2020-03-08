@@ -1,9 +1,9 @@
 // @ts-check
 
+/**
+ * @type {Partial<import('./next-config').NextConfig>}
+ */
 const config = {
-  /**
-   * @type {import('./next-config').WebpackConfig}
-   */
   webpack: (config, options) => {
     /**
      * @type {import('webpack').Rule}
