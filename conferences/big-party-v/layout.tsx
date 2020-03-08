@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-// import { normalizeStyles } from '../../components'
 import normalizeCss from '../../components/normalize.css'
 
 import { stylesUtils } from './utils.styles'

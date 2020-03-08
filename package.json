@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "deploy":"rm -rf out && yarn build && yarn export && touch out/.nojekyll",
+    "deploy": "rm -rf out && yarn build && yarn export && touch out/.nojekyll",
     "deploy:gh": "cp -R out/ ../ngparty.github.io/",
     "format:base": "prettier --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,css,md,html}\"",
     "format": "yarn format:base --write",
@@ -21,21 +21,20 @@
     }
   },
   "dependencies": {
-    "next": "9.1.4",
-    "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "next": "9.2.2",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
   },
   "devDependencies": {
     "@types/node": "12.12.7",
-    "@types/react": "16.9.11",
+    "@types/react": "16.9.23",
     "@types/styled-jsx": "2.2.8",
-    "@types/webpack": "4.41.0",
-    "@zeit/next-css": "1.0.1",
-    "husky": "3.0.9",
-    "lint-staged": "9.4.2",
+    "@types/webpack": "4.41.7",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.8",
     "prettier": "1.19.1",
     "raw-loader": "4.0.0",
     "styled-jsx": "3.2.4",
-    "typescript": "3.7.2"
+    "typescript": "3.8.3"
   }
 }
