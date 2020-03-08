@@ -1,8 +1,6 @@
 // @ts-check
 
-const withCSS = require('@zeit/next-css')
-
-const cfg = {
+const config = {
   /**
    * @type {import('./next-config').WebpackConfig}
    */
@@ -19,10 +17,7 @@ const cfg = {
           loader: require('styled-jsx/webpack').loader,
 
           options: /** @type {import('styled-jsx/webpack-config').Options} */ ({
-            type: (fileName, options) =>
-              fileName.endsWith('.module.css')
-                ? 'scoped'
-                : options.query.type || 'global',
+            type: 'global',
           }),
         },
       ],
@@ -34,9 +29,4 @@ const cfg = {
   },
 }
 
-const config = withCSS({
-  /* config options here */
-  ...cfg,
-})
-
-module.exports = cfg
+module.exports = config
