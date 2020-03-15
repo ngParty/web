@@ -5,13 +5,14 @@ import {
   Venue,
   Header,
   Footer,
-  theme,
   Sponsors,
   Intro,
   Speakers,
   Organizers,
   Faq,
   Tickets,
+  News,
+  theme,
   config as settings,
 } from '../../conferences/big-party-v'
 
@@ -51,6 +52,9 @@ const BigPartyV = () => {
 
         <main className="ap-main">
           <Intro />
+          <Section title="News" id="news">
+            <News />
+          </Section>
           <Section title="Speakers" id="speakers">
             <Speakers />
           </Section>

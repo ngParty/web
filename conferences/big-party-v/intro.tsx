@@ -32,7 +32,9 @@ export const Intro = () => {
             <div className="conf-intro">
               <h1 className="conf-intro__title">{DATA.title}</h1>
               <p className="conf-intro__date">
-                {DATA.date} <br /> {DATA.city}
+                <span className="line-through">{DATA.date}</span>
+                <br />
+                <span>{DATA.city}</span>
               </p>
             </div>
             <p
@@ -41,7 +43,11 @@ export const Intro = () => {
             />
           </div>
         </section>
-
+        <section className="center uppercase">
+          <A className="btn btn--accent" href="#news">
+            🚨 The conference is postponed - Read more 🚨
+          </A>
+        </section>
         <section className="about">
           <p
             className="about-content"

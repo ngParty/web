@@ -1,4 +1,5 @@
 export * from './intro'
+export * from './news'
 export * from './speakers'
 export * from './schedule'
 export * from './layout'

@@ -62,4 +62,11 @@ export const stylesUtils = css.global`
   .text-content {
     line-height: 1.6;
   }
+
+  .line-through {
+    text-decoration: line-through;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
 `

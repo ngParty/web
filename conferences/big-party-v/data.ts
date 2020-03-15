@@ -45,6 +45,10 @@ export const navigation: NavItemModel = {
       label: 'Tickets',
       link: '#tickets',
     },
+    {
+      label: 'News',
+      link: '#news',
+    },
   ],
 }
 
@@ -55,7 +59,7 @@ const links = {
 
 const config = {
   enableSchedule: true,
-  enableTickets: true,
+  enableTickets: false,
 }
 
 export { data, config, links }

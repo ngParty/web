@@ -3,7 +3,7 @@ import { ReactElement } from 'react'
 import { NgPartyNewIcon } from '../../components'
 
 import { styles, sidebarStyles } from './header.styles'
-import { navigation as DATA, LinkModel } from './data'
+import { navigation as DATA, LinkModel, config } from './data'
 import { A } from './shared'
 
 export const Header = () => {
@@ -32,7 +32,9 @@ export const Header = () => {
         <MainNav data={DATA.main} />
 
         <div className="headerbar-action center m0 p0 flex justify-center nowrap">
-          <BuyTicketsAction {...DATA.secondary[0]} />
+          <SecondaryNavItemAction
+            {...DATA.secondary[config.enableTickets ? 0 : 1]}
+          />
         </div>
       </header>
 
@@ -123,7 +125,7 @@ const SibebarNav = (props: { data: LinkModel[] }) => {
   )
 }
 
-const BuyTicketsAction = (props: LinkModel) => {
+const SecondaryNavItemAction = (props: LinkModel) => {
   const { link, label } = props
 
   return (
