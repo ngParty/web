@@ -11,44 +11,88 @@ export const News = () => {
 
 const Covid19 = () => {
   return (
-    <article>
-      <h2>🚨 Coronavirus update</h2>
-      <p>
-        We`ve been closely monitoring the situation with the spread of the
-        coronavirus, both in Czech Republic and world-wide. Unfortunately, the
-        situation became very serious and is affecting a lot of events and will
-        definitely affect ngBigParty V. Whatever the outcome, our first priority
-        is to ensure that any activity we do is risk free and the health of the
-        people around the event is our top priority at the moment.
-      </p>
+    <>
+      <article>
+        <h2>
+          🚨 Event Cancelled <small title="date">Aug 4th 2020</small>
+        </h2>
+        <p>
+          In the midst of the current COVID-19 pandemic, we were all faced with
+          several tough decisions. We were optimistic that the situation will
+          get better soon and we'll be able to do the event in Q3/4 this year.
+          After a long wait and careful monitoring the situation, we had to make
+          the toughest decision event organizers can make.
+        </p>
+        <p>
+          We’re very sorry to let you know ngBigParty V is cancelled, which we
+          believe is this is the wise and correct decision.
+        </p>
 
-      <p>
-        As of today (16.03.2020), the Czech government closed state borders and
-        declared a state of emergency for the upcoming 30 days…
-      </p>
+        <h3>Tickets</h3>
+        <p>
+          We will refund all purchased conference tickets in 2 upcoming weeks.
+        </p>
 
-      <p>
-        With that said,{' '}
-        <b>ngBigParty V is now officially postponed to another date.</b>
-      </p>
-      <p>
-        The event will take place somewhere in the autumn season, depending on
-        speakers availability with possible line-up modifications. We will be in
-        touch with you, the community, about all relevant info regarding the new
-        date.
-      </p>
+        <h3>Tickets purchased via Goout</h3>
+        <p>
+          Like COVID is not enough, our ticket provider reacted in an unexpected
+          way when dealing with refund.{' '}
+          <b>
+            Instead of refunding money, they issued a voucher, which is very
+            unfortunate, especially for community members that bought the ticket
+            and are not from Czech Republic.
+          </b>
+          <br />
+          We're dealing with this situation and will get back to you with
+          updates as soon as possible.
+        </p>
 
-      <h3>Tickets</h3>
-      <p>
-        We will automatically transfer all purchased conference tickets to the
-        next event.
-      </p>
+        <p>We’ll be back in 2021. Thank you for your support ❤️.</p>
+        <p>Best, ngParty Team</p>
+      </article>
 
-      <p>
-        If you'll have any further questions, ping us on social media or via
-        email.
-      </p>
-      <p>Best, ngParty Team</p>
-    </article>
+      <article>
+        <h2>
+          🚨 Coronavirus update <small title="date">Mar 15th 2020</small>
+        </h2>
+        <p>
+          We`ve been closely monitoring the situation with the spread of the
+          coronavirus, both in Czech Republic and world-wide. Unfortunately, the
+          situation became very serious and is affecting a lot of events and
+          will definitely affect ngBigParty V. Whatever the outcome, our first
+          priority is to ensure that any activity we do is risk free and the
+          health of the people around the event is our top priority at the
+          moment.
+        </p>
+
+        <p>
+          As of today (16.03.2020), the Czech government closed state borders
+          and declared a state of emergency for the upcoming 30 days…
+        </p>
+
+        <p>
+          With that said,
+          <b>ngBigParty V is now officially postponed to another date.</b>
+        </p>
+        <p>
+          The event will take place somewhere in the autumn season, depending on
+          speakers availability with possible line-up modifications. We will be
+          in touch with you, the community, about all relevant info regarding
+          the new date.
+        </p>
+
+        <h3>Tickets</h3>
+        <p>
+          We will automatically transfer all purchased conference tickets to the
+          next event.
+        </p>
+
+        <p>
+          If you'll have any further questions, ping us on social media or via
+          email.
+        </p>
+        <p>Best, ngParty Team</p>
+      </article>
+    </>
   )
 }

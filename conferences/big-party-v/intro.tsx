@@ -45,7 +45,7 @@ export const Intro = () => {
         </section>
         <section className="center uppercase">
           <A className="btn btn--accent" href="#news">
-            🚨 The conference is postponed - Read more 🚨
+            🚨 The conference is canceled - Read more 🚨
           </A>
         </section>
         <section className="about">
@@ -54,10 +54,10 @@ export const Intro = () => {
             dangerouslySetInnerHTML={{ __html: DATA.about }}
           />
           <AboutInNumbers data={DATA.aboutInNumbers} />
-          <Tickets
+          {/* <Tickets
             enable={data.config.enableTickets}
             link={data.navigation.secondary[0].link}
-          />
+          /> */}
         </section>
 
         <section className="gallery">
