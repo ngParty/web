@@ -1,4 +1,5 @@
 import { styles } from './news.styles'
+import Link from 'next/link'
 
 export const News = () => {
   return (
@@ -35,17 +36,19 @@ const Covid19 = () => {
 
         <h3>Tickets purchased via Goout</h3>
         <p>
-          Like COVID is not enough, our ticket provider reacted in an unexpected
-          way when dealing with refund.{' '}
-          <b>
-            Instead of refunding money, they issued a voucher, which is very
-            unfortunate, especially for community members that bought the ticket
-            and are not from Czech Republic.
-          </b>
-          <br />
-          We're dealing with this situation and will get back to you with
-          updates as soon as possible.
+          To get your money back instead of issued voucher, you'll need to write
+          to Goout directly.
         </p>
+        <p>
+          ✅ We've{' '}
+          <Link href="https://bit.ly/goout-ticket-refund-template">
+            prepared this template for you
+          </Link>
+          .
+        </p>
+        <p>Let us know if there will be any further issues.</p>
+
+        <hr />
 
         <p>We’ll be back in 2021. Thank you for your support ❤️.</p>
         <p>Best, ngParty Team</p>
