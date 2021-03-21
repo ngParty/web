@@ -17,7 +17,8 @@
     "format": "yarn format:base --write",
     "format:check": "yarn format:base --check",
     "ts-check": "yarn tsc",
-    "lint": "echo \"TODO\" && exit 1"
+    "lint": "echo \"TODO\" && exit 0",
+    "test": "echo \"TODO\" && exit 0"
   },
   "husky": {
     "hooks": {
