@@ -1,0 +1,25 @@
+name: CI
+
+# Run this workflow every time a new commit pushed to your repository
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - name: yarn install, format, lint, test and build
+        run: |
+          npm install -g yarn@1.22.10
+          yarn install --frozen-lockfile
+          yarn format:check
+          yarn lint
+          yarn test
+          yarn build
+        env:
+          CI: true
+          NEXT_TELEMETRY_DISABLED: 1
