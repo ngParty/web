@@ -1,12 +1,16 @@
 import { data as sharedData } from '../shared'
+
+interface NavigationItem {
+  label: string
+  link: string
+  /**
+   * flag to highligh menu item with accent color
+   */
+  upcoming?: string
+}
+
 export const data = {
   navigation: [
-    {
-      title: '',
-      upcoming: true,
-      label: 'ngBigParty V',
-      link: '/big-party-v',
-    },
     {
       label: 'Meetups',
       link: '//meetup.com/ngparty',
@@ -23,7 +27,7 @@ export const data = {
       label: 'Open Source',
       link: '//github.com/ngparty',
     },
-  ],
+  ] as NavigationItem[],
   more: sharedData.links.more,
   social: [
     {

@@ -93,11 +93,7 @@ const MainNav = () => {
         {data.navigation.map((item) => {
           return (
             <li key={item.label}>
-              <a
-                className={item.upcoming ? 'upcoming' : ''}
-                title={item.title}
-                href={item.link}
-              >
+              <a className={item.upcoming ? 'upcoming' : ''} href={item.link}>
                 {item.label}
               </a>
             </li>
