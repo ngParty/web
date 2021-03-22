@@ -134,7 +134,7 @@ export const globalStyles = css.global`
   }
 `
 
-export const cssVar = (themeKey: typeof theme) => `var(--ng-${themeKey})`
+export const cssVar = (themeKey: string) => `var(--ng-${themeKey})`
 
 export const theme = {
   colors,
