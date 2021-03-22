@@ -72,29 +72,31 @@ export const globalStyles = css.global`
     --ng-breakpoint-tablet: 960px;
   }
 
-  .dark-theme {
-    --ng-foreground: ${colors.background};
-    --ng-background: ${colors.foreground};
-    --ng-accent: ${colors.accent};
-    --ng-selection: var(--ng-accent);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ng-foreground: ${colors.background};
+      --ng-background: ${colors.foreground};
+      --ng-accent: ${colors.accent};
+      --ng-selection: var(--ng-accent);
 
-    --accents-8: #fafafa;
-    --accents-7: #eaeaea;
-    --accents-6: #999;
-    --accents-5: #888;
-    --accents-4: #666;
-    --accents-3: #444;
-    --accents-2: #333;
-    --accents-1: #111;
+      --accents-8: #fafafa;
+      --accents-7: #eaeaea;
+      --accents-6: #999;
+      --accents-5: #888;
+      --accents-4: #666;
+      --accents-3: #444;
+      --accents-2: #333;
+      --accents-1: #111;
 
-    --ng-link-color: var(--geist-foreground);
+      --ng-link-color: var(--geist-foreground);
 
-    --shadow-small: 0 0 0 1px var(--accents-2);
-    --shadow-medium: 0 0 0 1px var(--accents-2);
-    --shadow-large: 0 0 0 1px var(--accents-2);
-    --shadow-sticky: 0 0 0 1px var(--accents-2);
-    --shadow-hover: 0 0 0 1px var(--geist-foreground);
-    --shadow-logo: 0 0 20px 2px var(--accents-2);
+      --shadow-small: 0 0 0 1px var(--accents-2);
+      --shadow-medium: 0 0 0 1px var(--accents-2);
+      --shadow-large: 0 0 0 1px var(--accents-2);
+      --shadow-sticky: 0 0 0 1px var(--accents-2);
+      --shadow-hover: 0 0 0 1px var(--geist-foreground);
+      --shadow-logo: 0 0 20px 2px var(--accents-2);
+    }
   }
 
   html,

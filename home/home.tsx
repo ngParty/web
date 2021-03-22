@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react'
 import Head from 'next/head'
 
-import { NgPartyNewIcon, TwitterIcon, GithubIcon } from '../components'
+import { TwitterIcon, GithubIcon } from '../components'
 import normalizeCss from '../components/normalize.css'
 
 import { globalStyles } from './theme.styles'
 import { styles } from './home.styles'
 import { data } from './data'
+import { NgPartyIcon } from './logo'
 
 export const Home = () => (
   <>
@@ -66,7 +67,7 @@ const Logo = () => {
   return (
     <section className="logo-container">
       <h1 className="logo">
-        <NgPartyNewIcon />
+        <NgPartyIcon />
       </h1>
       <h2 className="brand-title">
         ngParty <small>Next Generation Development</small>
@@ -242,7 +243,7 @@ const Footer = () => {
       <div className="footer-wrapper">
         <div className="footer-wrapper-left">
           <div className="logotype">
-            <NgPartyNewIcon height={40} />
+            <NgPartyIcon height={40} />
           </div>
         </div>
         <div className="footer-wrapper-right">

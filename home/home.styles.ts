@@ -113,7 +113,7 @@ export const styles = css.global`
   }
   .brand-title small {
     font-size: 0.25em;
-    color: var(--accents-5);
+    color: var(--accents-7);
     display: block;
     margin-top: 0.25em;
     width: 100%;
