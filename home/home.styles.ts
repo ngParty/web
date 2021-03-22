@@ -3,6 +3,12 @@ import css from 'styled-jsx/css'
 import { theme } from './theme.styles'
 
 export const styles = css.global`
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
   .page {
   }
   .screen {
@@ -23,7 +29,24 @@ export const styles = css.global`
   }
 
   .container {
-    display: flex;
+    text-align: center;
+    padding: var(--ng-gap-big-half) 0.5rem;
+    max-width: 1024px;
+  }
+
+  .container a {
+    color: var(--accents-5);
+    transition: all 0.2s ease;
+  }
+  .container a:focus,
+  .container a:hover {
+    color: var(--ng-accent);
+  }
+
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    .container {
+      padding: calc(var(--ng-gap-big) / 1.5) 1rem;
+    }
   }
   .flex {
     display: flex;
@@ -152,12 +175,6 @@ export const styles = css.global`
     font-size: 1.5rem;
     line-height: 1.75em;
     letter-spacing: 0.025rem;
-    padding: var(--ng-gap-big-half) 0;
-  }
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    .about {
-      padding: var(--ng-gap-big) 0;
-    }
   }
   .about > p {
     margin: 1rem auto 0;

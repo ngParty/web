@@ -9,6 +9,8 @@ interface NavigationItem {
   upcoming?: string
 }
 
+const getImgPath = (img: string) => `/img/${img}`
+
 export const data = {
   navigation: [
     {
@@ -43,4 +45,11 @@ export const data = {
   ] as const,
   contact: sharedData.links.contact,
   currentYear: sharedData.currentYear,
+  sponsors: {
+    livesport: {
+      name: 'LiveSport',
+      img: getImgPath('partners/livesport.svg'),
+      link: 'https://www.livesport.eu/',
+    },
+  },
 }
