@@ -48,7 +48,7 @@ export const data = {
   sponsors: {
     livesport: {
       name: 'LiveSport',
-      img: getImgPath('partners/livesport.svg'),
+      img: getImgPath('partners/LIVESPORT_LOGO_RED_mod.svg'),
       link: 'https://www.livesport.eu/',
     },
   },
